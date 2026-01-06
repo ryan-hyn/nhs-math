@@ -1,0 +1,52 @@
+/* Reset some default styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Top navigation bar */
+div:first-of-type {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+}
+
+div:first-of-type a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+div:first-of-type a:hover {
+    text-decoration: underline;
+}
+
+/* Second navigation bar (terms) */
+div:nth-of-type(2) {
+    background-color: #e6e6e6;
+    padding: 8px 20px;
+}
+
+div:nth-of-type(2) a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #004080;
+}
+
+div:nth-of-type(2) a:hover {
+    text-decoration: underline;
+}
+
+/* Flash messages */
+ul {
+    background-color: #ffffcc;
+    padding: 10px;
+    border: 1px solid #cccc99;
+    list-style-type: none;
+}
+
+/* Content block */
+{% raw %}
+{% endraw %}
