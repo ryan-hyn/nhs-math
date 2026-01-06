@@ -1,20 +1,13 @@
-/* ===== General Body & Layout ===== */
-html, body {
-    height: 100%;
-    margin: 0;
+/* ------------------- General body styles ------------------- */
+body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f9f9f9;
     color: #333;
-    display: flex;
-    flex-direction: column;
 }
 
-/* Make main content stretch to push footer down */
-main, .hero-login-container {
-    flex: 1;
-}
-
-/* ===== Header ===== */
+/* ------------------- Top navbar ------------------- */
 header {
     background-color: #004080;
     color: white;
@@ -22,9 +15,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky; /* stays on top when scrolling */
-    top: 0;
-    z-index: 1000;
 }
 
 header a {
@@ -37,66 +27,115 @@ header a:hover {
     text-decoration: underline;
 }
 
-/* ===== Footer ===== */
+/* ------------------- Secondary navbar (terms) ------------------- */
+nav {
+    background-color: #e6e6e6;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #004080;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------- Main content container ------------------- */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ------------------- Flash messages ------------------- */
+ul.flash-messages {
+    background-color: #ffffcc;
+    padding: 10px;
+    border: 1px solid #cccc99;
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+/* ------------------- Footer ------------------- */
 footer {
     text-align: center;
     background-color: #004080;
     color: white;
     padding: 15px;
+    margin-top: 20px;
 }
 
-/* ===== Hero + Login Container ===== */
-.hero-login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    background: linear-gradient(120deg, #e0f0ff, #ffffff);
-    width: 100%;
-}
-
-/* Hero Section */
-.hero-login-container .hero {
+/* ------------------- Hero Section ------------------- */
+.hero {
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 30px;
+    padding: 80px 20px;
+    background: linear-gradient(120deg, #e0f0ff, #ffffff);
+    border-bottom: 2px solid #004080;
 }
 
-.hero-login-container .hero h1 {
-    font-size: 2.2em;
+.hero h1 {
+    font-size: 2.5em;
     color: #004080;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.hero-login-container .hero p {
-    font-size: 1.1em;
+.hero p {
+    font-size: 1.2em;
     color: #333;
+    margin-bottom: 25px;
 }
 
-/* Login Form */
-.hero-login-container .form-container {
+.hero .btn {
+    background-color: #004080;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.hero .btn:hover {
+    background-color: #003366;
+}
+
+/* ------------------- Login / Register forms ------------------- */
+main.form-container {
     max-width: 400px;
-    width: 90%;
+    margin: -60px auto 50px; /* lifts it closer to hero */
     padding: 30px 25px;
     background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
 }
 
-.hero-login-container form input[type="text"],
-.hero-login-container form input[type="password"],
-.hero-login-container form input[type="email"],
-.hero-login-container form button {
+main.form-container:hover {
+    transform: translateY(-5px); /* subtle hover lift */
+}
+
+/* Make form inputs full width and look nice */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form button {
     width: 100%;
     padding: 10px 15px;
     margin-bottom: 15px;
-    border-radius: 4px;
+    border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 1em;
     box-sizing: border-box;
 }
 
-.hero-login-container form button {
+/* Style submit button */
+form button {
     background-color: #004080;
     color: white;
     border: none;
@@ -104,32 +143,38 @@ footer {
     transition: background-color 0.2s;
 }
 
-.hero-login-container form button:hover {
+form button:hover {
     background-color: #003366;
 }
 
 /* Error messages */
-.hero-login-container .error {
+.error {
     color: red;
     font-size: 0.9em;
 }
 
-/* Links inside form */
-.hero-login-container a {
+/* Links inside forms */
+main.form-container a {
     color: #004080;
     text-decoration: none;
 }
 
-.hero-login-container a:hover {
+main.form-container a:hover {
     text-decoration: underline;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 600px) {
-    .hero-login-container {
-        padding: 30px 15px;
+/* ------------------- Responsive for small screens ------------------- */
+@media (max-width: 500px) {
+    main.form-container {
+        margin: 20px;
+        padding: 20px;
     }
-    .hero-login-container .hero h1 {
-        font-size: 1.8em;
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
     }
 }
