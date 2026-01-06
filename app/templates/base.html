@@ -1,46 +1,59 @@
-<!doctype html>
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - NHS</title>
-        {% else %}
-        <title>Welcome to NHS Math!</title>
-        {% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if title %}
+    <title>{{ title }} - NHS</title>
+    {% else %}
+    <title>Welcome to NHS Math!</title>
+    {% endif %}
 
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Top navbar -->
+    <header>
+        <div>NHS Math</div>
         <div>
-            NHS Math:
             <a href="{{ url_for('index') }}">Home</a>
             {% if current_user.is_anonymous %}
-            <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('login') }}">Login</a>
             {% else %}
-            <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-            <a href="{{ url_for('logout') }}">Logout</a>
+                <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
             {% endif %}
         </div>
-        <hr>
-        <div>
-            {% if not current_user.is_anonymous %}
-            <a href="{{ url_for('term_1') }}">Term 1</a>
-            <a href="{{ url_for('term_2') }}">Term 2</a>
-            <a href="{{ url_for('term_3') }}">Term 3</a>
-            <a href="{{ url_for('term_4') }}">Term 4</a>
-            {% endif %}
-        </div>
-        <hr>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
+    </header>
+
+    <!-- Terms navigation -->
+    {% if not current_user.is_anonymous %}
+    <nav>
+        <a href="{{ url_for('term_1') }}">Term 1</a>
+        <a href="{{ url_for('term_2') }}">Term 2</a>
+        <a href="{{ url_for('term_3') }}">Term 3</a>
+        <a href="{{ url_for('term_4') }}">Term 4</a>
+    </nav>
+    {% endif %}
+
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flash-messages">
+        {% for message in messages %}
             <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        {% endwith %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <!-- Main content -->
+    <main>
         {% block content %}{% endblock %}
-    </body>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; {{ current_year if current_year else "2026" }} NHS Math
+    </footer>
+</body>
 </html>
-
-

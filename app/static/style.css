@@ -1,52 +1,72 @@
-/* Reset some default styling */
+/* General body styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Top navigation bar */
-div:first-of-type {
+/* Top navbar */
+header {
     background-color: #004080;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-div:first-of-type a {
+header a {
     color: white;
     text-decoration: none;
     margin-left: 15px;
 }
 
-div:first-of-type a:hover {
+header a:hover {
     text-decoration: underline;
 }
 
-/* Second navigation bar (terms) */
-div:nth-of-type(2) {
+/* Secondary navbar (terms) */
+nav {
     background-color: #e6e6e6;
-    padding: 8px 20px;
+    padding: 10px 20px;
 }
 
-div:nth-of-type(2) a {
+nav a {
+    color: #004080;
     text-decoration: none;
     margin-right: 15px;
-    color: #004080;
 }
 
-div:nth-of-type(2) a:hover {
+nav a:hover {
     text-decoration: underline;
+}
+
+/* Content container */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* Flash messages */
-ul {
+ul.flash-messages {
     background-color: #ffffcc;
     padding: 10px;
     border: 1px solid #cccc99;
     list-style-type: none;
+    margin: 10px 0;
 }
 
-/* Content block */
-{% raw %}
-{% endraw %}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
