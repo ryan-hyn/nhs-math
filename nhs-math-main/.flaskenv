@@ -1,2 +1,0 @@
-FLASK_APP=nhs.py
-FLASK_DEBUG=1
