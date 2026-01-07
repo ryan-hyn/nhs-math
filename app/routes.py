@@ -119,25 +119,28 @@ def reset_password(token):
 @app.route('/term_1')
 @login_required
 def term_1():
-    return render_template('term_1.html', title='term 1')
+    unit1 = 'Unit 1'
+    unit2 = 'Unit 2'
+    unit3 = 'Unit 3'
+    return render_template('term_1.html', title='Term 1', unit1=unit1, unit2=unit2, unit3=unit3)
 
 @app.route('/unit_1')
 @login_required
 def unit_1():
-    swbat1 = ('fill this in later')
-    return render_template('unit_1.html', title='unit 1', swbat1=swbat1)
+    swbat1 = 'Fill this in later'
+    return render_template('unit_1.html', title='Unit 1', swbat=swbat1)
 
 @app.route('/unit_2')
 @login_required
 def unit_2():
-    swbat2 = ('fill this in later')
-    return render_template('unit_2.html', title='unit 2', swbat2=swbat2)
+    swbat2 = 'Fill this in later'
+    return render_template('unit_2.html', title='Unit 2', swbat=swbat2)
 
 @app.route('/unit_3')
 @login_required
 def unit_3():
-    swbat3 = ('fill this in later')
-    return render_template('unit_3.html', title='unit 3', swbat3=swbat3)
+    swbat3 = 'Fill this in later'
+    return render_template('unit_3.html', title='Unit 3', swbat=swbat3)
 
 @app.route('/term_2')
 @login_required

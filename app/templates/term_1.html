@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3>Units don't always end up in the same term every year! 
-        Your teacher can tell you which unit you are in, or you can go to the term after the one
-        you are currently on.
-    </h3>
-    <p> {{ unit3 }}</p>
-    <a href="{{ url_for('unit_1') }}">Unit 1</a>
-    <a href="{{ url_for('unit_2') }}">Unit 2</a>
-    <a href="{{ url_for('unit_3') }}">Unit 3</a>
+<h3>Units don't always end up in the same term every year!</h3>
+<p>Your teacher can tell you which unit you are in, or you can go to the next unit.</p>
+
+<div class="unit-grid">
+    <a href="{{ url_for('unit_1') }}" class="unit-card">{{ unit1 }}</a>
+    <a href="{{ url_for('unit_2') }}" class="unit-card">{{ unit2 }}</a>
+    <a href="{{ url_for('unit_3') }}" class="unit-card">{{ unit3 }}</a>
+</div>
 {% endblock %}

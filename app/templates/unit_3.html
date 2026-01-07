@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p> {{ swbat3 }}</p>
+<div class="unit-hero">
+    <h2>Unit 3</h2>
+    <p>This unit is currently under construction. Check back soon for SWBATs and lessons!</p>
+    <p>{{ swbat }}</p>
+    <a href="{{ url_for('term_1') }}" class="btn">Back to Term 1</a>
+</div>
 {% endblock %}
