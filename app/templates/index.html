@@ -1,6 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Welcome, {{ current_user.username }}!</h1>
-    <div><p>{{ posts }}</p></div>
+<div class="page-container">
+    <h1 class="page-title">Welcome, {{ current_user.username }} 👋</h1>
+
+    <p class="post-content">
+        Select the term that matches the topic you are studying.
+    </p>
+
+    <div class="term-grid">
+        <a href="{{ url_for('term_1') }}" class="term-card">
+            <h2>Term 1</h2>
+            <p>Units 1–3</p>
+        </a>
+
+        <a href="{{ url_for('term_2') }}" class="term-card">
+            <h2>Term 2</h2>
+            <p>Units 4–5</p>
+        </a>
+
+        <a href="{{ url_for('term_3') }}" class="term-card">
+            <h2>Term 3</h2>
+            <p>Units 6–8</p>
+        </a>
+
+        <a href="{{ url_for('term_4') }}" class="term-card">
+            <h2>Term 4</h2>
+            <p>Final Review</p>
+        </a>
+    </div>
+</div>
 {% endblock %}

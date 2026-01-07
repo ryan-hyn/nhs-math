@@ -44,8 +44,8 @@ def logout():
 @app.route('/index')
 @login_required
 def index():
-    posts = ('For further specification, click on which term the topic you are trying to study falls on')
-    return render_template('index.html', title='Home Page', posts=posts)
+    message = "For further specification, click on which term the topic you are trying to study falls on."
+    return render_template('index.html', title='Home Page', message=message)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
