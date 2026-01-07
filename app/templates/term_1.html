@@ -5,8 +5,9 @@
 <p>Your teacher can tell you which unit you are in, or you can go to the next unit.</p>
 
 <div class="unit-grid">
-    <a href="{{ url_for('unit_1') }}" class="unit-card">{{ unit1 }}</a>
-    <a href="{{ url_for('unit_2') }}" class="unit-card">{{ unit2 }}</a>
-    <a href="{{ url_for('unit_3') }}" class="unit-card">{{ unit3 }}</a>
+    {% for unit in units %}
+        {% set unit_number = loop.index %}
+        <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
+    {% endfor %}
 </div>
 {% endblock %}

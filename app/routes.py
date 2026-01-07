@@ -1,21 +1,15 @@
-from flask import render_template, flash, redirect, url_for
-from app import app
-from app.forms import LoginForm
-from flask_login import current_user, login_user
-import sqlalchemy as sa
-from app import db
+from flask import render_template, flash, redirect, url_for, request
+from app import app, db
+from app.forms import LoginForm, RegistrationForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm
 from app.models import User
-from flask_login import logout_user
-from flask_login import login_required
-from flask import request
-from urllib.parse import urlsplit
-from app.forms import RegistrationForm
-from app.forms import EditProfileForm
-from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
-from app.forms import ResetPasswordForm 
+from flask_login import current_user, login_user, logout_user, login_required
+import sqlalchemy as sa
+from urllib.parse import urlsplit
 
-# ...
+# ---------------------------
+# Auth Routes
+# ---------------------------
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -23,8 +17,7 @@ def login():
         return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        user = db.session.scalar(
-            sa.select(User).where(User.username == form.username.data))
+        user = db.session.scalar(sa.select(User).where(User.username == form.username.data))
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
             return redirect(url_for('login'))
@@ -39,7 +32,7 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
- 
+
 @app.route('/')
 @app.route('/index')
 @login_required
@@ -82,8 +75,7 @@ def edit_profile():
         return redirect(url_for('edit_profile'))
     elif request.method == 'GET':
         form.username.data = current_user.username
-    return render_template('edit_profile.html', title='Edit Profile',
-                           form=form)
+    return render_template('edit_profile.html', title='Edit Profile', form=form)
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
@@ -91,14 +83,12 @@ def reset_password_request():
         return redirect(url_for('index'))
     form = ResetPasswordRequestForm()
     if form.validate_on_submit():
-        user = db.session.scalar(
-            sa.select(User).where(User.email == form.email.data))
+        user = db.session.scalar(sa.select(User).where(User.email == form.email.data))
         if user:
             send_password_reset_email(user)
         flash('Check your email for the instructions to reset your password')
         return redirect(url_for('login'))
-    return render_template('reset_password_request.html',
-                           title='Reset Password', form=form)
+    return render_template('reset_password_request.html', title='Reset Password', form=form)
 
 @app.route('/reset_password/<token>', methods=['GET', 'POST'])
 def reset_password(token):
@@ -115,47 +105,94 @@ def reset_password(token):
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
 
-# term 1 is units 1-3
+# ---------------------------
+# Term and Unit Routes
+# ---------------------------
+
+# Term 1 (Units 1-3)
 @app.route('/term_1')
 @login_required
 def term_1():
-    unit1 = 'Unit 1'
-    unit2 = 'Unit 2'
-    unit3 = 'Unit 3'
-    return render_template('term_1.html', title='Term 1', unit1=unit1, unit2=unit2, unit3=unit3)
+    units = ['Unit 1', 'Unit 2', 'Unit 3']
+    return render_template('term_1.html', title='Term 1', units=units)
 
 @app.route('/unit_1')
 @login_required
 def unit_1():
-    swbat1 = 'Fill this in later'
-    return render_template('unit_1.html', title='Unit 1', swbat=swbat1)
+    swbat = 'Fill this in later'
+    return render_template('unit_1.html', title='Unit 1', swbat=swbat)
 
 @app.route('/unit_2')
 @login_required
 def unit_2():
-    swbat2 = 'Fill this in later'
-    return render_template('unit_2.html', title='Unit 2', swbat=swbat2)
+    swbat = 'Fill this in later'
+    return render_template('unit_2.html', title='Unit 2', swbat=swbat)
 
 @app.route('/unit_3')
 @login_required
 def unit_3():
-    swbat3 = 'Fill this in later'
-    return render_template('unit_3.html', title='Unit 3', swbat=swbat3)
+    swbat = 'Fill this in later'
+    return render_template('unit_3.html', title='Unit 3', swbat=swbat)
 
+# Term 2 (Units 4-5)
 @app.route('/term_2')
 @login_required
 def term_2():
-    unit3_2 = ('Unit 4', 'Unit 5')
-    return render_template('term_2.html', title='term 2', unit3_2 = unit3_2)
+    units = ['Unit 4', 'Unit 5']
+    return render_template('term_2.html', title='Term 2', units=units)
 
+@app.route('/unit_4')
+@login_required
+def unit_4():
+    swbat = 'Fill this in later'
+    return render_template('unit_4.html', title='Unit 4', swbat=swbat)
+
+@app.route('/unit_5')
+@login_required
+def unit_5():
+    swbat = 'Fill this in later'
+    return render_template('unit_5.html', title='Unit 5', swbat=swbat)
+
+# Term 3 (Units 6-8)
 @app.route('/term_3')
 @login_required
 def term_3():
-    unit3_3 = ('Unit 6', 'Unit 7', 'Unit 8')
-    return render_template('term_3.html', title='term 3', unit3_3 = unit3_3)
+    units = ['Unit 6', 'Unit 7', 'Unit 8']
+    return render_template('term_3.html', title='Term 3', units=units)
 
+@app.route('/unit_6')
+@login_required
+def unit_6():
+    swbat = 'Fill this in later'
+    return render_template('unit_6.html', title='Unit 6', swbat=swbat)
+
+@app.route('/unit_7')
+@login_required
+def unit_7():
+    swbat = 'Fill this in later'
+    return render_template('unit_7.html', title='Unit 7', swbat=swbat)
+
+@app.route('/unit_8')
+@login_required
+def unit_8():
+    swbat = 'Fill this in later'
+    return render_template('unit_8.html', title='Unit 8', swbat=swbat)
+
+# Term 4 (Units 9 + Final Review)
 @app.route('/term_4')
 @login_required
 def term_4():
-    unit3_4 = ('Unit 9', 'Final Review')
-    return render_template('term_4.html', title='term 4', unit3_4 = unit3_4)
+    units = ['Unit 9', 'Final Review']
+    return render_template('term_4.html', title='Term 4', units=units)
+
+@app.route('/unit_9')
+@login_required
+def unit_9():
+    swbat = 'Fill this in later'
+    return render_template('unit_9.html', title='Unit 9', swbat=swbat)
+
+@app.route('/final_review')
+@login_required
+def final_review():
+    swbat = 'Fill this in later'
+    return render_template('final_review.html', title='Final Review', swbat=swbat)

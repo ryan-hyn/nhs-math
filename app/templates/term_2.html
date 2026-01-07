@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Units for Term 2</h3>
-<p>Units may vary year to year. Click a unit to see its lessons.</p>
+<h3>Term 2 Units</h3>
+<p>These are the units for Term 2. Click on one to view the content.</p>
 
 <div class="unit-grid">
-    <a href="#" class="unit-card">Unit 4</a>
-    <a href="#" class="unit-card">Unit 5</a>
+    {% for unit in units %}
+        {% set unit_number = loop.index + 3 %} {# Term 2 starts at Unit 4 #}
+        <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
+    {% endfor %}
 </div>
 {% endblock %}
