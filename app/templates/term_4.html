@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Term 4 Units</h3>
-<p>These are the units for Term 4. Click on one to view the content.</p>
+
+<div class="unit-hero">
+    <h2>Units for Term 4 can vary each year!</h2>
+    <p>Your teacher will inform you which unit to start with, or explore the next unit below.</p>
+</div>
 
 <div class="unit-grid">
     {% for unit in units %}
-        {% set unit_number = loop.index + 8 %} {# Term 4 starts at Unit 9 #}
-        {% if unit == 'Final Review' %}
-            <a href="{{ url_for('final_review') }}" class="unit-card">{{ unit }}</a>
-        {% else %}
-            <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
-        {% endif %}
+        {% set unit_number = loop.index %}
+        <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
     {% endfor %}
 </div>
+
 {% endblock %}

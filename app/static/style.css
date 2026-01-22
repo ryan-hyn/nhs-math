@@ -1,399 +1,275 @@
-/* ------------------- General body styles ------------------- */
+/* =================== GENERAL IMPROVEMENTS =================== */
+
+/* Base body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif; /* Modern font */
+    line-height: 1.65;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4f6f8; /* softer, modern light gray */
     color: #333;
 }
 
-/* ------------------- Top navbar ------------------- */
-header {
-    background-color: #004080;
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header a {
-    color: white;
+/* Links */
+a {
+    color: #004080;
     text-decoration: none;
-    margin-left: 15px;
+    transition: all 0.2s ease;
 }
-
-header a:hover {
+a:hover {
+    color: #00264d;
     text-decoration: underline;
 }
 
-/* ------------------- Secondary navbar (terms) ------------------- */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #004080;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* ------------------- HEADER ------------------- */
+header {
+    background: linear-gradient(90deg, #004080, #0059b3);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+header a {
+    color: white;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* ------------------- NAVIGATION ------------------- */
 nav {
-    background-color: #e6e6e6;
-    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 30px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
 nav a {
     color: #004080;
-    text-decoration: none;
-    margin-right: 15px;
+    font-weight: 500;
+    margin-right: 20px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 nav a:hover {
-    text-decoration: underline;
-}
-
-/* ------------------- Main content container ------------------- */
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* ------------------- Flash messages ------------------- */
-ul.flash-messages {
-    background-color: #ffffcc;
-    padding: 10px;
-    border: 1px solid #cccc99;
-    list-style-type: none;
-    margin: 10px 0;
-}
-
-/* ------------------- Footer ------------------- */
-footer {
-    text-align: center;
     background-color: #004080;
     color: white;
-    padding: 15px;
-    margin-top: 20px;
 }
 
-/* ------------------- Hero Section ------------------- */
-.hero {
+/* ------------------- HERO SECTION ------------------- */
+.hero, .unit-hero {
+    background: linear-gradient(135deg, #e0f0ff 0%, #ffffff 100%);
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(120deg, #e0f0ff, #ffffff);
-    border-bottom: 2px solid #004080;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    color: #004080;
+.hero h1, .unit-hero h2 {
+    font-size: 2.5rem;
     margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 1.2em;
-    color: #333;
+.hero p, .unit-hero p {
+    font-size: 1.2rem;
+    color: #555;
     margin-bottom: 25px;
 }
 
-.hero .btn {
+.hero .btn, .unit-hero .btn {
     background-color: #004080;
     color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
-.hero .btn:hover {
+.hero .btn:hover, .unit-hero .btn:hover {
     background-color: #003366;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
 }
 
-/* ------------------- Login / Register forms ------------------- */
+/* ------------------- FORM CONTAINERS ------------------- */
 main.form-container {
-    max-width: 400px;
-    margin: -60px auto 50px; /* lifts it closer to hero */
-    padding: 30px 25px;
+    max-width: 420px;
+    margin: -60px auto 60px;
+    padding: 35px 30px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    transition: transform 0.2s;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 main.form-container:hover {
-    transform: translateY(-5px); /* subtle hover lift */
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.16);
 }
 
-/* Make form inputs full width and look nice */
 form input[type="text"],
 form input[type="password"],
 form input[type="email"],
 form button {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 15px;
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 1em;
     box-sizing: border-box;
+    transition: all 0.2s ease;
 }
 
-/* Style submit button */
+form input:focus {
+    outline: none;
+    border-color: #004080;
+    box-shadow: 0 0 0 3px rgba(0,64,128,0.15);
+}
+
 form button {
     background-color: #004080;
     color: white;
     border: none;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
 }
 
 form button:hover {
     background-color: #003366;
-}
-
-/* Error messages */
-.error {
-    color: red;
-    font-size: 0.9em;
-}
-
-/* Links inside forms */
-main.form-container a {
-    color: #004080;
-    text-decoration: none;
-}
-
-main.form-container a:hover {
-    text-decoration: underline;
-}
-
-/* ------------------- Responsive for small screens ------------------- */
-@media (max-width: 500px) {
-    main.form-container {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-}
-/* ------------------- Index / Dashboard ------------------- */
-
-.page-container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.page-title {
-    font-size: 2em;
-    color: #004080;
-    margin-bottom: 10px;
-}
-
-/* ------------------- Posts feed ------------------- */
-
-.posts {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.post-card {
-    background-color: #fdfdfd;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #004080;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.post-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
 }
 
+/* ------------------- POSTS AND CARDS ------------------- */
+.post-card, .term-card, .unit-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-card:hover, .term-card:hover, .unit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* Post meta styling */
 .post-meta {
     display: flex;
     justify-content: space-between;
     font-size: 0.85em;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .post-meta .author {
-    font-weight: bold;
+    font-weight: 600;
     color: #004080;
 }
 
-.post-content {
-    font-size: 1.05em;
-    line-height: 1.6;
+/* Unit & term grids */
+.unit-grid, .term-grid, .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
-/* ------------------- Empty state ------------------- */
+.unit-card, .term-card {
+    text-align: center;
+    padding: 25px 20px;
+    width: 220px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    background: linear-gradient(135deg, #004080 0%, #0059b3 100%);
+    color: white;
+    border-radius: 12px;
+}
 
+.unit-card:hover, .term-card:hover {
+    background: linear-gradient(135deg, #003366 0%, #004080 100%);
+}
+
+/* ------------------- EMPTY STATES ------------------- */
 .empty-state {
     text-align: center;
     padding: 50px 20px;
     background: #f4f8ff;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px dashed #aac4e6;
+    box-shadow: inset 0 0 0 1px #dde6f5;
+    font-weight: 500;
 }
 
-.empty-state p:first-child {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.empty-state p:last-child {
-    color: #555;
-}
-/* ------------------- Term cards dashboard ------------------- */
-
-.term-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* centers items horizontally */
-    gap: 20px;
-    margin-top: 30px;
-}
-
-
-.term-card {
-    display: block;
-    padding: 25px;
-    background: white;
-    border-radius: 10px;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.term-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-.term-card h2 {
-    color: #004080;
-    margin-bottom: 8px;
-}
-
-.term-card p {
-    color: #555;
-    margin: 0;
-}
-/* ------------------- Unit cards (Term pages) ------------------- */
-
-.unit-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* centers items horizontally */
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.unit-card {
-    display: block;
-    width: 220px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+/* ------------------- FOOTER ------------------- */
+footer {
     text-align: center;
+    background: linear-gradient(90deg, #004080, #0059b3);
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.95em;
 }
 
-.unit-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-.unit-card h2 {
-    color: #004080;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.unit-card p {
-    color: #555;
-    font-size: 0.95rem;
-    margin: 0;
-}
-
-/* Responsive tweaks */
+/* ------------------- RESPONSIVE IMPROVEMENTS ------------------- */
 @media (max-width: 500px) {
-    .unit-card {
-        width: 90%;
-        padding: 15px;
+    main.form-container {
+        margin: 20px;
+        padding: 25px;
     }
-    .hero h1 {
+
+    .hero h1, .unit-hero h2 {
         font-size: 1.8rem;
     }
-    .hero p {
+
+    .hero p, .unit-hero p {
         font-size: 1rem;
     }
-}
-.unit-grid {
-    display: flex;
-    justify-content: center; /* center horizontally */
-    gap: 20px; /* space between cards */
-    margin-top: 20px;
-    flex-wrap: wrap; /* wrap on smaller screens */
-}
 
-.unit-card {
-    background-color: #004080;
-    color: white;
-    padding: 20px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.unit-card:hover {
-    background-color: #003366;
-    transform: translateY(-5px);
+    .unit-card, .term-card {
+        width: 90%;
+        padding: 20px;
+    }
 }
 .unit-hero {
     text-align: center;
-    background-color: #e0f0ff;
-    padding: 60px 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #e0f0ff 0%, #ffffff 100%);
+    padding: 50px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .unit-hero h2 {
     color: #004080;
-    font-size: 2em;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 15px;
+    line-height: 1.3;
 }
 
 .unit-hero p {
-    font-size: 1.1em;
+    font-size: 1.15rem;
     color: #333;
-    margin-bottom: 20px;
-}
-
-.unit-hero .btn {
-    background-color: #004080;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-
-.unit-hero .btn:hover {
-    background-color: #003366;
+    margin: 0;
+    line-height: 1.6;
 }

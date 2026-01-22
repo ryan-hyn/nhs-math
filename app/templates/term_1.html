@@ -1,13 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Units don't always end up in the same term every year!</h3>
-<p>Your teacher can tell you which unit you are in, or you can go to the next unit.</p>
 
+<!-- Hero section for Term 1 -->
+<div class="unit-hero">
+    <h2>Welcome to Term 1 Units!</h2>
+    <p>Units may shift from year to year. Your teacher can guide you to your current unit, or you can explore the next unit below.</p>
+</div>
+
+<!-- Grid of unit cards -->
 <div class="unit-grid">
     {% for unit in units %}
         {% set unit_number = loop.index %}
         <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
     {% endfor %}
 </div>
+
 {% endblock %}

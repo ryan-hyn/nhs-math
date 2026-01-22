@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Term 3 Units</h3>
-<p>These are the units for Term 3. Click on one to view the content.</p>
+
+<div class="unit-hero">
+    <h2>Units for Term 3 may change every year!</h2>
+    <p>Check with your teacher for your current unit, or continue to the next unit below.</p>
+</div>
 
 <div class="unit-grid">
     {% for unit in units %}
-        {% set unit_number = loop.index + 5 %} {# Term 3 starts at Unit 6 #}
+        {% set unit_number = loop.index %}
         <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
     {% endfor %}
 </div>
+
 {% endblock %}
