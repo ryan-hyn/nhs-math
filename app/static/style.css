@@ -273,3 +273,65 @@ footer {
     margin: 0;
     line-height: 1.6;
 }
+/* ------------------- Highlight Section ------------------- */
+.highlight-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.highlight-section h3 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.highlight-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-card {
+    display: inline-block;
+    padding: 20px 25px;
+    background-color: #e0f0ff;
+    color: #004080;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ------------------- Term Summary ------------------- */
+.term-summary {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.term-summary p {
+    font-size: 1.15rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.term-summary .btn {
+    background-color: #004080;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.term-summary .btn:hover {
+    background-color: #003366;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
