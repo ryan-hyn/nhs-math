@@ -208,6 +208,31 @@ form button:hover {
 .unit-card:hover, .term-card:hover {
     background: linear-gradient(135deg, #003366 0%, #004080 100%);
 }
+/* =================== FIX: CARD TEXT CONTRAST =================== */
+.unit-card,
+.term-card,
+.unit-card a,
+.term-card a,
+.unit-card h1,
+.unit-card h2,
+.unit-card h3,
+.term-card h1,
+.term-card h2,
+.term-card h3,
+.unit-card p,
+.term-card p {
+    color: #ffffff;
+}
+
+.unit-card,
+.term-card {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.unit-card a:hover,
+.term-card a:hover {
+    text-decoration: underline;
+}
 
 /* ------------------- EMPTY STATES ------------------- */
 .empty-state {
