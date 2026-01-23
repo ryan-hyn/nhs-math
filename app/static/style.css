@@ -2,11 +2,11 @@
 
 /* Base body styles */
 body {
-    font-family: 'Inter', Arial, sans-serif; /* Modern font */
+    font-family: 'Inter', Arial, sans-serif;
     line-height: 1.65;
     margin: 0;
     padding: 0;
-    background-color: #f4f6f8; /* softer, modern light gray */
+    background-color: #f4f6f8;
     color: #333;
 }
 
@@ -157,7 +157,7 @@ form button:hover {
 }
 
 /* ------------------- POSTS AND CARDS ------------------- */
-.post-card, .term-card, .unit-card {
+.post-card, .unit-card {
     background-color: white;
     border-radius: 12px;
     padding: 20px 25px;
@@ -167,12 +167,64 @@ form button:hover {
     color: inherit;
 }
 
-.post-card:hover, .term-card:hover, .unit-card:hover {
+.post-card:hover, .unit-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
-/* Post meta styling */
+/* ------------------- TERM CARDS (fixed navy version) ------------------- */
+.term-card {
+    display: block; /* for <a> elements */
+    width: 240px;
+    padding: 30px 20px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #004080 0%, #0059b3 100%);
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transition: all 0.35s ease, background 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.term-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #003366 0%, #004080 100%);
+}
+
+.term-card h2,
+.term-card p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.term-card p {
+    font-size: 1rem;
+    margin-top: 6px;
+    color: #e0eaff;
+}
+
+/* ------------------- UNIT CARDS (if needed separately) ------------------- */
+.unit-card {
+    background: linear-gradient(135deg, #004080 0%, #0059b3 100%);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.unit-card:hover {
+    background: linear-gradient(135deg, #003366 0%, #004080 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* ------------------- POST META ------------------- */
 .post-meta {
     display: flex;
     justify-content: space-between;
@@ -186,52 +238,12 @@ form button:hover {
     color: #004080;
 }
 
-/* Unit & term grids */
+/* ------------------- GRIDS ------------------- */
 .unit-grid, .term-grid, .posts {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-}
-
-.unit-card, .term-card {
-    text-align: center;
-    padding: 25px 20px;
-    width: 220px;
-    font-weight: 600;
-    transition: all 0.25s ease;
-    background: linear-gradient(135deg, #004080 0%, #0059b3 100%);
-    color: white;
-    border-radius: 12px;
-}
-
-.unit-card:hover, .term-card:hover {
-    background: linear-gradient(135deg, #003366 0%, #004080 100%);
-}
-/* =================== FIX: CARD TEXT CONTRAST =================== */
-.unit-card,
-.term-card,
-.unit-card a,
-.term-card a,
-.unit-card h1,
-.unit-card h2,
-.unit-card h3,
-.term-card h1,
-.term-card h2,
-.term-card h3,
-.unit-card p,
-.term-card p {
-    color: #ffffff;
-}
-
-.unit-card,
-.term-card {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-}
-
-.unit-card a:hover,
-.term-card a:hover {
-    text-decoration: underline;
 }
 
 /* ------------------- EMPTY STATES ------------------- */
@@ -245,36 +257,7 @@ form button:hover {
     font-weight: 500;
 }
 
-/* ------------------- FOOTER ------------------- */
-footer {
-    text-align: center;
-    background: linear-gradient(90deg, #004080, #0059b3);
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 0.95em;
-}
-
-/* ------------------- RESPONSIVE IMPROVEMENTS ------------------- */
-@media (max-width: 500px) {
-    main.form-container {
-        margin: 20px;
-        padding: 25px;
-    }
-
-    .hero h1, .unit-hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero p, .unit-hero p {
-        font-size: 1rem;
-    }
-
-    .unit-card, .term-card {
-        width: 90%;
-        padding: 20px;
-    }
-}
+/* ------------------- HERO/UNIT HERO ------------------- */
 .unit-hero {
     text-align: center;
     background: linear-gradient(135deg, #e0f0ff 0%, #ffffff 100%);
@@ -298,7 +281,8 @@ footer {
     margin: 0;
     line-height: 1.6;
 }
-/* ------------------- Highlight Section ------------------- */
+
+/* ------------------- HIGHLIGHT SECTION ------------------- */
 .highlight-section {
     text-align: center;
     margin: 40px 0;
@@ -334,7 +318,7 @@ footer {
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* ------------------- Term Summary ------------------- */
+/* ------------------- TERM SUMMARY ------------------- */
 .term-summary {
     text-align: center;
     margin: 50px 0;
@@ -359,4 +343,85 @@ footer {
 .term-summary .btn:hover {
     background-color: #003366;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ------------------- PAGE CONTAINER ------------------- */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #004080;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.page-intro {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* ------------------- ANIMATIONS ------------------- */
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* ------------------- FOOTER ------------------- */
+footer {
+    text-align: center;
+    background: linear-gradient(90deg, #004080, #0059b3);
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.95em;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 768px) {
+    .term-grid {
+        gap: 20px;
+    }
+
+    .term-card {
+        width: 200px;
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .term-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-intro {
+        font-size: 1rem;
+    }
+
+    main.form-container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .hero h1, .unit-hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p, .unit-hero p {
+        font-size: 1rem;
+    }
 }

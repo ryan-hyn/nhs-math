@@ -13,5 +13,9 @@
         <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
     {% endfor %}
 </div>
-
+<!-- Term Completion Summary / CTA -->
+<div class="term-summary">
+    <p>You’ve completed <strong>2 of {{ units|length }}</strong> units this term.</p>
+    <a href="{{ url_for('index') }}" class="btn">Go to Dashboard</a>
+</div>
 {% endblock %}
