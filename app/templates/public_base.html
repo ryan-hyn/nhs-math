@@ -7,9 +7,18 @@
     <title>Welcome to NHS Math!</title>
     {% endif %}
 
-    <!-- Link to CSS -->
+    <!-- App CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Landing page CSS -->
+    {% if title == "Welcome" %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/main.css') }}">
+        <noscript>
+            <link rel="stylesheet" href="{{ url_for('static', filename='assets/noscript.css') }}">
+        </noscript>
+    {% endif %}
 </head>
+
 <body>
 
     <header>
