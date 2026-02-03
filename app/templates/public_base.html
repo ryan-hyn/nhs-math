@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% if title %}
+    <title>{{ title }} - NHS</title>
+    {% else %}
+    <title>Welcome to NHS Math!</title>
+    {% endif %}
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div>NHS Math</div>
+        <div>
+            <a href="{{ url_for('landing') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>

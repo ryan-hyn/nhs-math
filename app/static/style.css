@@ -1,3 +1,8 @@
+/* ==========================
+   APP STYLES (logged-in pages)
+   Hyperspace landing page uses its own CSS files.
+   ========================== */
+
 /* =================== GENERAL IMPROVEMENTS =================== */
 
 /* Base body styles */
@@ -174,7 +179,7 @@ form button:hover {
 
 /* ------------------- TERM CARDS (fixed navy version) ------------------- */
 .term-card {
-    display: block; /* for <a> elements */
+    display: block;
     width: 240px;
     padding: 30px 20px;
     border-radius: 14px;
