@@ -7,8 +7,6 @@
     <title>Welcome to NHS Math!</title>
     {% endif %}
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     <!-- Landing page CSS -->
     {% if title == "Welcome" %}
@@ -21,15 +19,19 @@
 
 <body>
 
-    <header>
-        <div>NHS Math</div>
-        <div>
-            <a href="{{ url_for('landing') }}">Home</a>
-            <a href="{{ url_for('login') }}">Login</a>
-        </div>
-    </header>
+<!-- ===== TOP NAVBAR ===== -->
+<header id="top-nav">
+    <div class="logo">NHS Math</div>
+    <nav class="top-menu">
+        <a href="{{ url_for('landing') }}">Home</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="#one">About</a>
+        <a href="#two">Features</a>
+        <a href="#three">Contact</a>
+    </nav>
+</header>
 
-    {% block content %}{% endblock %}
+{% block content %}{% endblock %}
 
 </body>
 </html>

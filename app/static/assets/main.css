@@ -3907,3 +3907,85 @@ input, select, textarea {
 			}
 
 		}
+/* ==========================
+   TOP NAVBAR (HYPERSPACE)
+========================== */
+
+#top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(16, 42, 67, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+#top-nav .logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#top-nav .top-menu a {
+    color: #e6edff;
+    margin-left: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#top-nav .top-menu a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Move content down so navbar doesn't overlap */
+#wrapper {
+    padding-top: 90px;
+}
+/* ==========================
+   STICKY TOP NAVBAR
+========================== */
+
+#top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(26, 2, 112, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+#top-nav .logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#top-nav .top-menu a {
+    color: #e6edff;
+    margin-left: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+#top-nav .top-menu a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+/* Push down content so navbar doesn't overlap */
+#wrapper {
+    padding-top: 90px;
+}
+#sidebar {
+    margin-top: 70px;  /* moves sidebar down */
+}
