@@ -3975,6 +3975,7 @@ input, select, textarea {
     color: #e6edff;
     margin-left: 18px;
     font-weight: 500;
+	padding: 1px 10px;     
     text-decoration: none;
 }
 
