@@ -66,12 +66,12 @@ h1, h2, h3, h4, h5, h6 {
 
 #top-nav .top-menu a {
     color: white;
-    margin-left: 50px;
+    margin-left: 38px;
     font-weight: 500;
-    font-size: 1.1rem;      
+    font-size: 1.2em;      
     text-decoration: underline;
     padding: 10px 10px;     
-    border-radius: 5px;
+    border-radius: 50x;
     transition: background-color 0.2s, color 0.2s;
 }
 
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero, .unit-hero {
     background: linear-gradient(135deg, #0059b3, #8fc6ff);
     text-align: center;
-    padding: 90px 20px 120px 20px;
+    padding: 90px 20px 250px 20px;
     border-radius: 10px;
     margin-bottom: -60px;
 }
@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------- FORM CONTAINERS ------------------- */
 main.form-container {
     max-width: 420px;
-    margin: -80px auto 80px;  /* overlaps hero */
+    margin: -200px auto 80px;  /* overlaps hero */
     padding: 40px 35px;
 
     background: white;
