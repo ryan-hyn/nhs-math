@@ -192,21 +192,35 @@ form button:hover {
 
 /* ------------------- TERM CARDS (fixed navy version) ------------------- */
 .term-card {
-    display: block;
-    width: 240px;
-    padding: 30px 20px;
+    width: 260px;
+    min-height: 200px;
+    padding: 40px 25px;
+    font-size: 1.15rem;       /* base font-size for card text */
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     border-radius: 14px;
     background: linear-gradient(135deg, #004080 0%, #0059b3 100%);
-    color: #ffffff;
-    text-align: center;
+    color: #ffffff;           /* all text defaults to white */
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     transition: all 0.35s ease, background 0.35s ease;
-    position: relative;
-    overflow: hidden;
 }
 
+/* Make the titles bigger */
+.term-card h2 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;       /* nice spacing between title and description */
+    color: #ffffff;            /* explicit color */
+}
+
+/* Make the description text bigger */
+.term-card p {
+    font-size: 1.2rem;         /* slightly larger for balance */
+    margin: 0;                  /* reset margins */
+    color: #e0eaff;             /* soft contrast to title */
+    line-height: 1.5;           /* easier to read */
+}
+/* Hover effect */
 .term-card:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 16px 32px rgba(0,0,0,0.2);
@@ -365,29 +379,26 @@ form button:hover {
 
 /* ------------------- PAGE CONTAINER ------------------- */
 .page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    animation: fadeInUp 0.8s ease forwards;
+    min-height: calc(100vh - 200px); /* full viewport minus navbar & some padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* top-align content, can switch to center if desired */
+    padding: 60px 20px 40px;
 }
 
 .page-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #004080;
-    text-align: center;
     margin-bottom: 15px;
-    letter-spacing: 0.5px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    font-size: 2.8rem;
+    text-align: center;
+    color: #004080;
 }
 
 .page-intro {
     font-size: 1.2rem;
-    text-align: center;
     color: #555;
-    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 50px;  /* more space below intro */
 }
-
 /* ------------------- ANIMATIONS ------------------- */
 @keyframes fadeInUp {
     0% {opacity: 0; transform: translateY(20px);}
@@ -407,7 +418,11 @@ footer {
 /* ------------------- RESPONSIVE ------------------- */
 @media (max-width: 768px) {
     .term-grid {
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 20px;  /* extra breathing room above grid */
     }
 
     .term-card {
