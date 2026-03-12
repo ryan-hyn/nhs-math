@@ -11,7 +11,7 @@ body {
     line-height: 1.65;
     margin: 0;
     padding: 0;
-    background-color: #f4f6f8;
+    background-color: #f4f8ff;
     color: #333;
 }
 
@@ -66,9 +66,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #top-nav .top-menu a {
     color: white;
-    margin-left: 18px;
+    margin-left: 50px;
     font-weight: 500;
-    font-size: 1.075rem;      
+    font-size: 1.1rem;      
     text-decoration: underline;
     padding: 10px 10px;     
     border-radius: 5px;
@@ -87,14 +87,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* ------------------- HERO SECTION ------------------- */
 .hero, .unit-hero {
-    background: linear-gradient(135deg, #e0f0ff 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #0059b3, #8fc6ff);
     text-align: center;
-    padding: 80px 20px;
+    padding: 90px 20px 120px 20px;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin-bottom: 40px;
+    margin-bottom: -60px;
 }
-
 .hero h1, .unit-hero h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
@@ -127,12 +125,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------- FORM CONTAINERS ------------------- */
 main.form-container {
     max-width: 420px;
-    margin: -60px auto 60px;
-    padding: 35px 30px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: -80px auto 80px;  /* overlaps hero */
+    padding: 40px 35px;
+
+    background: white;
+    border-radius: 14px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
 main.form-container:hover {
@@ -444,3 +443,11 @@ footer {
         font-size: 1rem;
     }
 }
+.hero h1 {
+    color: white;
+}
+
+.hero p {
+    color: #e6f2ff;
+}
+
