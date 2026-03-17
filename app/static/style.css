@@ -379,10 +379,17 @@ form button:hover {
 
 /* ------------------- PAGE CONTAINER ------------------- */
 .page-container {
-    min-height: calc(100vh - 200px); /* full viewport minus navbar & some padding */
+    min-height: calc(100vh - 205px); /* full viewport minus navbar & some padding */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* top-align content, can switch to center if desired */
+    padding: 60px 20px 40px;
+}
+.page-container2 {
+    min-height: calc(100vh - 240px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
     padding: 60px 20px 40px;
 }
 
