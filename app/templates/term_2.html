@@ -10,8 +10,10 @@
 
 <div class="unit-grid">
     {% for unit in units %}
-        {% set unit_number = loop.index %}
-        <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
+        {% set unit_number = loop.index + 3 %}
+        <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">
+            {{ unit }}
+        </a>
     {% endfor %}
 </div>
 <!-- Term Completion Summary / CTA -->

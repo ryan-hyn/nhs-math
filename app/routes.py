@@ -224,8 +224,8 @@ def unit_9():
     swbat = 'Fill this in later'
     return render_template('unit_9.html', title='Unit 9', swbat=swbat)
 
-@app.route('/final_review')
+@app.route('/unit_10')
 @login_required
-def final_review():
+def unit_10():
     swbat = 'Fill this in later'
-    return render_template('final_review.html', title='Final Review', swbat=swbat)
+    return render_template('unit_10.html', title='Final Review', swbat=swbat)
