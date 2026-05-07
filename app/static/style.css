@@ -3,7 +3,6 @@
    Hyperspace landing page uses its own CSS files.
    ========================== */
 
-/* =================== GENERAL IMPROVEMENTS =================== */
 
 /* Base body styles */
 body {
@@ -209,8 +208,8 @@ form button:hover {
 /* Make the titles bigger */
 .term-card h2 {
     font-size: 1.9rem;
-    margin-bottom: 15px;       /* nice spacing between title and description */
-    color: #ffffff;            /* explicit color */
+    margin-bottom: 15px;      
+    color: #ffffff;           
 }
 
 /* Make the description text bigger */
@@ -377,7 +376,7 @@ form button:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* ------------------- PAGE CONTAINER ------------------- */
+/* ------------------- PAGE CONTAINER ----00--------------- */
 .page-container {
     min-height: calc(100vh - 205px); /* full viewport minus navbar & some padding */
     display: flex;
