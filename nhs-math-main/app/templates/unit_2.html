@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="unit-hero">
+  <h1>Unit 2: Solving Equations</h1>
+
+  <h2>Identifying a Solution</h2>
+
+  <p>To determine whether a value is a solution, substitute it into the equation and check if both sides are equal.</p>
+
+  <div class="example">
+    <strong>Example:</strong><br>
+    5x = 40<br><br>
+    If x = 8:<br>
+    5(8) = 40 ✔
+  </div>
+
+  <div class="example">
+    <strong>Example:</strong><br>
+    27 + 4x = 51<br><br>
+    If x = 6:<br>
+    27 + 24 = 51 ✔
+  </div>
+
+  <h2>One-Step Equations</h2>
+
+  <p>One-step equations require one inverse operation to isolate the variable.</p>
+
+  <div class="example">
+    5x = 40<br>
+    x = 8
+  </div>
+
+  <h2>Two-Step Equations</h2>
+
+  <div class="example">
+    27 + 4x = 51<br><br>
+    4x = 24<br>
+    x = 6
+  </div>
+
+  <h2>Multi-Step Equations</h2>
+
+  <div class="example">
+    x/2 - 40 = 10 × 3<br><br>
+    x/2 - 40 = 30<br>
+    x/2 = 70<br>
+    x = 140
+  </div>
+
+  <div class="note">
+    Simplify both sides first whenever possible.
+  </div>
+
+  <h2>Equations with Variables on Both Sides</h2>
+
+  <div class="example">
+    4x - 16 = 2x<br><br>
+    -16 = -2x<br>
+    x = 8
+  </div>
+
+  <div class="example">
+    6x - 10 = 3x + 5<br><br>
+    3x - 10 = 5<br>
+    3x = 15<br>
+    x = 5
+  </div>
+
+  <div class="note">
+    The goal is to move all variables to one side and constants to the other.
+  </div>
+
+  <h2>No Solution Cases</h2>
+
+  <div class="example">
+    8y(10 - 6) = 2y(8 + 10)<br><br>
+    32y = 36y<br>
+  </div>
+
+  <p>If y is only one number, you can't multiple y by two different numbers and get the same results. Therefore, the solution doesn't exist.</p>
+
+  <h2>Literal Equations and Formulas</h2>
+
+  <p>A literal equation contains two or more variables. You solve for one variable in terms of the others.</p>
+
+  <div class="example">
+    3x + 5y = 20<br><br>
+    3x = 20 - 5y<br>
+    x = (20 - 5y) / 3
+  </div>
+
+  <div class="example">
+    ab + c = 2c - 4b<br><br>
+    ab = c - 4b<br>
+    a = (c - 4b) / b
+  </div>
+
+  <div class="example">
+    A = bh<br><br>
+    b = A / h
+  </div>
+    <a href="{{ url_for('term_1') }}" class="btn">Back to Term 1</a>
+</div>
+{% endblock %}

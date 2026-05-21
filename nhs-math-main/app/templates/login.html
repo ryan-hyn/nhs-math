@@ -1,0 +1,58 @@
+{% extends "public_base.html" %}
+
+{% block content %}
+
+<section class="hero-login-container">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to NHS Math: Algebra 1</h1>
+        <p>Master Algebra 1 concepts quickly and confidently.</p>
+       </div>
+
+    <!-- Login Form Section -->
+    <main class="form-container">
+        <h1>Sign In</h1>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label }}<br>
+                {{ form.username(size=32) }}<br>
+                {% for error in form.username.errors %}
+                <span class="error">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32) }}<br>
+                {% for error in form.password.errors %}
+                <span class="error">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            <p>{{ form.submit() }}</p>
+            <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+            <p>
+                Forgot Your Password?
+                <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+            </p>
+        </form>
+    </main>
+
+    <!-- Optional Algebra 1 Topics Preview 
+    <div class="topics-preview">
+        <h2>Explore Algebra 1 Topics</h2>
+        <ul>
+            <li>Linear Equations</li>
+            <li>Factoring & Quadratics</li>
+            <li>Graphing Functions</li>
+            <li>Inequalities</li>
+        </ul>
+    </div>
+    -->
+
+</section>
+
+{% endblock %}
