@@ -215,7 +215,10 @@ def unit_8():
 @app.route('/term_4')
 @login_required
 def term_4():
-    units = ['Unit 9', 'Final Review']
+    units = [
+            {'name': 'Unit 9', 'route': 'unit_9'},
+            {'name': 'Final Review', 'route': 'final_review'} 
+    ]
     return render_template('term_4.html', title='Term 4', units=units)
 
 @app.route('/unit_9')
