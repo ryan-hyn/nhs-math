@@ -4,11 +4,24 @@
 <div class="unit-hero">
     <h1>Unit 1: Foundations of Algebra</h1>
 
+    <h2>Main Topics</h2>
+    <ul>
+      <li>Real Numbers</li>
+      <li>Adding and Subtracting Real Numbers</li>
+      <li>Multiplying and Dividing Real Numbers</li>
+      <li>Inverse Property of Multiplication</li>
+      <li>Multiplying and Dividing Fractions</li>
+      <li>Order of Oeprations</li>
+      <li>Variables and Expressions</li>
+      <li>The Distributive Property</li>
+      <li>Combining Like Terms</li>
+    </ul>
+
   <h2>Real Numbers</h2>
 
   <p>
-    Real numbers are all numbers that can be placed on a number line.
-    They include positive numbers, negative numbers, fractions, decimals, and roots.
+    Real numbers are all numbers that can be placed on a number line.<br>
+    They include positive numbers, negative numbers, fractions, decimals, and square roots.
   </p>
 
   <h3>Types of Real Numbers</h3>
@@ -52,7 +65,7 @@
   </table>
 
   <div class="note">
-    <strong>Note:</strong> √-1 is not a real number. It is an imaginary number.
+    <strong>Note:</strong> √-1 is not a real number. It is an imaginary number because you cannot find the square root of an negative number.
   </div>
 
   <h2>Order of Operations</h2>
@@ -82,21 +95,23 @@
 
     <tr>
       <td>AS</td>
-      <td>Addition & Subtraction</td>
+      <td>Addition & Subtraction</td><br>
     </tr>
   </table>
-
+  <br>
   <div class="note">
     Multiplication and division are solved from left to right.
-    Addition and subtraction are also solved from left to right.
+    Addition and subtraction are also solved from left to right.<br>
+    This means that even though in PEMDAS, multiplication comes before division,
+    if the division sign appears first in an equation, you would divide first.<br>
+    The same rule applies to addition and subtraction.
   </div>
-
+  <br>
   <div class="example">
     <strong>Examples:</strong><br>
     7 ÷ 9 × 8 → divide first, then multiply<br><br>
 
-    54 - 27 + 8 × 5<br>
-    Multiply first, then solve subtraction and addition from left to right.
+    54 - 27 + 8 × 5 → Multiply first, then solve subtraction and addition from left to right.<br>
   </div>
 
   <h2>Variables and Expressions</h2>
@@ -128,40 +143,41 @@
 
     <tr>
       <td>40 - y</td>
-      <td>40 minus y</td>
+      <td>40 minus y</td><br>
     </tr>
   </table>
-
+  <br>
   <p>
-    The number attached to a variable is called the coefficient.
+    The number attached to a variable is called the coefficient.<br><br>
   </p>
 
   <div class="example">
     <strong>Examples:</strong><br>
-    40y ÷ 5 = 8y<br>
-    3y × 20 = 60y
+    40y ÷ 5 = 8y → the coefficients are 40 and 8<br>
+    3y × 20 = 60y → the coefficients are 3 and 60
   </div>
 
-  <h3>Why Some Terms Cannot Combine</h3>
+  <h3>When Terms Cannot Combine</h3>
 
   <p>
-    You cannot add or subtract unlike terms because they represent different values.
+    You cannot add or subtract unlike terms because they either represent different values
+    or because of PEMDAS.<br><br>
   </p>
 
   <div class="example">
     <strong>Examples:</strong><br>
-    7x - 8 cannot simplify further<br>
-    25x - 50y cannot simplify further
+    7x - 8 cannot simplify further because next in PEMDAS is multiplication<br>
+    25x - 50y cannot simplify further not only because of PEMDAS, but because x and y are worth two different values
   </div>
 
   <h2>The Distributive Property</h2>
 
   <p>
-    The distributive property allows a number outside parentheses to multiply every term inside.
+    Using the distributive property, a number outside the parentheses multiplies with every term inside.<br>
   </p>
 
   <div class="formula">
-    a(b + c) = ab + ac
+    <strong>Forumula: a(b + c) = ab + ac</strong><br><br>
   </div>
 
   <div class="example">
@@ -173,9 +189,12 @@
   <h3>Factoring</h3>
 
   <p>
-    Factoring is the reverse of distributing.
+    Factoring is the reverse of distributing. Factoring only works when you factor or take out a common factor
   </p>
 
+  <div class="formula">
+    <strong>Formula: ax + ay + az = a(x + y + z)</strong><br><br>
+  </div>
   <div class="example">
     <strong>Example:</strong><br>
     3y + 12x + 9 = 3(y + 4x + 3)
@@ -184,7 +203,7 @@
   <h2>Combining Like Terms</h2>
 
   <p>
-    Like terms contain the same variable raised to the same power.
+    Terms containing the same variable and exponent can be combined together.
   </p>
 
   <h3>Adding and Subtracting Like Terms</h3>
@@ -192,32 +211,10 @@
   <div class="example">
     <strong>Examples:</strong><br>
     4x + 4x = 8x<br>
-    10k - 3k = 7k
+    10k^5 - 3k^5 = 7k^5<br>
+    8y^2 - 4y cannot be combined because y is raised to two separate powers
   </div>
-
-  <h3>Multiplying and Dividing Variables</h3>
-
-  <h4>Multiplication</h4>
-
-  <div class="formula">
-    xᵃ × xᵇ = xᵃ⁺ᵇ
-  </div>
-
-  <div class="example">
-    <strong>Example:</strong><br>
-    5y × 8y = 40y²
-  </div>
-
-  <h4>Division</h4>
-
-  <div class="formula">
-    xᵃ ÷ xᵇ = xᵃ⁻ᵇ
-  </div>
-
-  <div class="example">
-    <strong>Example:</strong><br>
-    56y ÷ 7y = 8
-  </div>
+  <br>
     <a href="{{ url_for('term_1') }}" class="btn">Back to Term 1</a>
 </div>
 {% endblock %}
