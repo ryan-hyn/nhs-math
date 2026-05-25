@@ -1,0 +1,486 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="unit-hero">
+      <h1>Unit 9: Quadratic Functions and Equations</h1>
+
+  <div class="section">
+    <h2>Main Topics</h2>
+    <ol>
+      <li>Quadratic graphs and their properties</li>
+      <li>Quadratic functions</li>
+      <li>Solving quadratic equations</li>
+      <li>Factoring to solve quadratic equations</li>
+      <li>Systems of linear and quadratic equations</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>1. Quadratic Graphs and Their Properties</h2>
+
+    <p>A <strong>quadratic function</strong> is a function where the highest exponent is <strong>2</strong>.</p>
+
+    <p>The standard form of a quadratic function is:</p>
+
+    <p><code>y = ax² + bx + c</code></p>
+
+    <p>or</p>
+
+    <p><code>f(x) = ax² + bx + c</code></p>
+
+    <h3>Important Properties</h3>
+
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Meaning</th>
+      </tr>
+
+      <tr>
+        <td>Parabola</td>
+        <td>The U-shaped graph of a quadratic function</td>
+      </tr>
+
+      <tr>
+        <td>Vertex</td>
+        <td>The highest or lowest point of the parabola</td>
+      </tr>
+
+      <tr>
+        <td>Axis of Symmetry</td>
+        <td>The vertical line that cuts the parabola in half</td>
+      </tr>
+
+      <tr>
+        <td>Opens Upward</td>
+        <td>Happens when <code>a</code> is positive</td>
+      </tr>
+
+      <tr>
+        <td>Opens Downward</td>
+        <td>Happens when <code>a</code> is negative</td>
+      </tr>
+
+      <tr>
+        <td>X-Intercepts</td>
+        <td>Where the graph touches or crosses the x-axis</td>
+      </tr>
+
+      <tr>
+        <td>Roots / Zeros</td>
+        <td>Another name for the x-intercepts</td>
+      </tr>
+
+      <tr>
+        <td>Y-Intercept</td>
+        <td>Where the graph crosses the y-axis</td>
+      </tr>
+    </table>
+
+    <div class="rule">
+      If a is positive, the graph opens upward like a smile.
+      <br />
+      If a is negative, the graph opens downward like a frown.
+    </div>
+
+    <div class="example">
+      <p>Example:</p>
+      <p><code>y = x² + 5x + 6</code></p>
+      <p>This is quadratic because the highest exponent is <code>2</code>.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. Solving Quadratic Equations</h2>
+
+    <p>A quadratic equation is usually written as:</p>
+
+    <p><code>ax² + bx + c = 0</code></p>
+
+    <p>The goal is to find the values of <code>x</code> that make the equation equal <strong>0</strong>.</p>
+
+    <p>These values are called:</p>
+
+    <ul>
+      <li>zeros</li>
+      <li>roots</li>
+      <li>solutions</li>
+      <li>x-intercepts</li>
+    </ul>
+
+    <table>
+      <tr>
+        <th>Number of Zeros</th>
+        <th>Meaning</th>
+      </tr>
+
+      <tr>
+        <td>2 zeros</td>
+        <td>The graph crosses the x-axis twice</td>
+      </tr>
+
+      <tr>
+        <td>1 zero</td>
+        <td>The graph touches the x-axis once</td>
+      </tr>
+
+      <tr>
+        <td>0 real zeros</td>
+        <td>The graph does not touch the x-axis</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>3. The Quadratic Formula</h2>
+
+    <p>The quadratic formula is:</p>
+
+    <div class="rule">
+      x = (-b ± sqrt(b² - 4ac)) / 2a
+    </div>
+
+    <p>You use this formula when solving:</p>
+
+    <p><code>ax² + bx + c = 0</code></p>
+
+    <p>The values are:</p>
+
+    <p><code>a</code> = coefficient of <code>x²</code></p>
+    <p><code>b</code> = coefficient of <code>x</code></p>
+    <p><code>c</code> = constant</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Example With Two Zeros</h2>
+
+    <div class="example">
+      <p>Example:</p>
+      <p><code>x² + 5x + 6 = 0</code></p>
+
+      <p>Here:</p>
+      <p><code>a = 1</code>, <code>b = 5</code>, <code>c = 6</code></p>
+
+      <p><strong>Step 1:</strong> Plug the values into the quadratic formula.</p>
+      <p><code>x = (-5 ± sqrt(5² - 4(1)(6))) / 2(1)</code></p>
+
+      <p><strong>Step 2:</strong> Simplify inside the square root.</p>
+      <p><code>x = (-5 ± sqrt(25 - 24)) / 2</code></p>
+      <p><code>x = (-5 ± sqrt(1)) / 2</code></p>
+      <p><code>x = (-5 ± 1) / 2</code></p>
+
+      <p><strong>Step 3:</strong> Solve both equations.</p>
+
+      <p>First solution:</p>
+      <p><code>x = (-5 + 1) / 2</code></p>
+      <p><code>x = -4 / 2</code></p>
+      <p><code>x = -2</code></p>
+
+      <p>Second solution:</p>
+      <p><code>x = (-5 - 1) / 2</code></p>
+      <p><code>x = -6 / 2</code></p>
+      <p><code>x = -3</code></p>
+
+      <p class="answer">Final Answer: x = -2 and x = -3</p>
+
+      <p>This means the graph crosses the x-axis at <code>x = -2</code> and <code>x = -3</code>.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>5. Example With No Real Zeros</h2>
+
+    <div class="example">
+      <p>Example:</p>
+      <p><code>x² + 4x + 8 = 0</code></p>
+
+      <p>Here:</p>
+      <p><code>a = 1</code>, <code>b = 4</code>, <code>c = 8</code></p>
+
+      <p><strong>Step 1:</strong> Plug the values into the quadratic formula.</p>
+      <p><code>x = (-4 ± sqrt(4² - 4(1)(8))) / 2(1)</code></p>
+
+      <p><strong>Step 2:</strong> Simplify inside the square root.</p>
+      <p><code>x = (-4 ± sqrt(16 - 32)) / 2</code></p>
+      <p><code>x = (-4 ± sqrt(-16)) / 2</code></p>
+
+      <div class="warning">
+        Since sqrt(-16) is not a real number, there are no real zeros.
+      </div>
+
+      <p class="answer">Final Answer: No real solutions</p>
+
+      <p>This means the graph does not cross the x-axis.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>6. Example With One Zero</h2>
+
+    <div class="example">
+      <p>Example:</p>
+      <p><code>x² - 6x + 9 = 0</code></p>
+
+      <p>Here:</p>
+      <p><code>a = 1</code>, <code>b = -6</code>, <code>c = 9</code></p>
+
+      <p><strong>Step 1:</strong> Plug the values into the quadratic formula.</p>
+      <p><code>x = (-(-6) ± sqrt((-6)² - 4(1)(9))) / 2(1)</code></p>
+
+      <p><strong>Step 2:</strong> Simplify.</p>
+      <p><code>x = (6 ± sqrt(36 - 36)) / 2</code></p>
+      <p><code>x = (6 ± sqrt(0)) / 2</code></p>
+      <p><code>x = (6 ± 0) / 2</code></p>
+
+      <p><strong>Step 3:</strong> Solve both.</p>
+      <p><code>x = (6 + 0) / 2 = 3</code></p>
+      <p><code>x = (6 - 0) / 2 = 3</code></p>
+
+      <p>Both answers are the same, so there is only <strong>one zero</strong>.</p>
+
+      <p class="answer">Final Answer: x = 3</p>
+
+      <p>This means the graph touches the x-axis once at <code>x = 3</code>.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>7. Quadratic Functions</h2>
+
+    <p>A quadratic function can be graphed using its important points.</p>
+
+    <p>The standard form is:</p>
+
+    <p><code>y = ax² + bx + c</code></p>
+
+    <h3>Finding the Vertex</h3>
+
+    <p>The vertex is the highest or lowest point of the parabola.</p>
+
+    <div class="rule">
+      Vertex Formula: x = -b / 2a
+    </div>
+
+    <p>Then plug that x-value back into the equation to find the y-value.</p>
+
+    <p>The vertex is written as:</p>
+
+    <p><code>(x, y)</code></p>
+
+    <h3>Graphing a Quadratic Function</h3>
+
+    <ol>
+      <li>Find the vertex using <code>x = -b / 2a</code>.</li>
+      <li>Plug that x-value into the equation to find the y-value.</li>
+      <li>Find the zeros by factoring or using the quadratic formula.</li>
+      <li>Plot the vertex and zeros on the graph.</li>
+      <li>Draw a smooth parabola through the points.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>8. Factoring to Solve Quadratic Equations</h2>
+
+    <p>Sometimes quadratic equations can be solved by factoring.</p>
+
+    <div class="example">
+      <p>Example:</p>
+      <p><code>x² + 5x + 6 = 0</code></p>
+
+      <p><strong>Step 1:</strong> Factor the quadratic.</p>
+
+      <p>Find two numbers that multiply to <code>6</code> and add to <code>5</code>.</p>
+
+      <p>Those numbers are <code>2</code> and <code>3</code>.</p>
+
+      <p>So:</p>
+
+      <p><code>x² + 5x + 6 = 0</code></p>
+
+      <p>becomes:</p>
+
+      <p><code>(x + 2)(x + 3) = 0</code></p>
+
+      <p><strong>Step 2:</strong> Set each factor equal to zero.</p>
+
+      <p><code>x + 2 = 0</code></p>
+      <p><code>x = -2</code></p>
+
+      <p>And:</p>
+
+      <p><code>x + 3 = 0</code></p>
+      <p><code>x = -3</code></p>
+
+      <p class="answer">Final Answer: x = -2 and x = -3</p>
+
+      <p>This means the graph crosses the x-axis at <code>x = -2</code> and <code>x = -3</code>.</p>
+    </div>
+
+    <div class="rule">
+      Not every quadratic equation is factorable. If it is not factorable, use the quadratic formula.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>9. Systems of Linear and Quadratic Equations</h2>
+
+    <p>A system of linear and quadratic equations has:</p>
+
+    <ul>
+      <li>one linear equation</li>
+      <li>one quadratic equation</li>
+    </ul>
+
+    <p>A linear equation makes a straight line.</p>
+
+    <p>A quadratic equation makes a parabola.</p>
+
+    <p>The solutions are the points where the line and parabola intersect.</p>
+
+    <div class="rule">
+      The main method is substitution because both equations are usually equal to y.
+    </div>
+
+    <div class="example">
+      <p>Example:</p>
+
+      <p><code>y = x + 2</code></p>
+      <p><code>y = x² - 2x - 2</code></p>
+
+      <p><strong>Step 1:</strong> Set the equations equal to each other.</p>
+      <p><code>x + 2 = x² - 2x - 2</code></p>
+
+      <p><strong>Step 2:</strong> Move everything to one side.</p>
+      <p><code>0 = x² - 3x - 4</code></p>
+
+      <p><strong>Step 3:</strong> Factor the quadratic.</p>
+
+      <p>Find two numbers that multiply to <code>-4</code> and add to <code>-3</code>.</p>
+
+      <p>Those numbers are <code>-4</code> and <code>1</code>.</p>
+
+      <p>Split the middle term:</p>
+
+      <p><code>x² - 4x + x - 4</code></p>
+
+      <p>Group the terms:</p>
+
+      <p><code>(x² - 4x) + (x - 4)</code></p>
+
+      <p>Factor each group:</p>
+
+      <p><code>x(x - 4) + 1(x - 4)</code></p>
+
+      <p>Factor out the matching parentheses:</p>
+
+      <p><code>(x + 1)(x - 4)</code></p>
+
+      <p><strong>Step 4:</strong> Set each factor equal to zero.</p>
+
+      <p><code>x + 1 = 0</code></p>
+      <p><code>x = -1</code></p>
+
+      <p>And:</p>
+
+      <p><code>x - 4 = 0</code></p>
+      <p><code>x = 4</code></p>
+
+      <p><strong>Step 5:</strong> Plug each x-value into the linear equation.</p>
+
+      <p>Use:</p>
+
+      <p><code>y = x + 2</code></p>
+
+      <p>For <code>x = 4</code>:</p>
+      <p><code>y = 4 + 2</code></p>
+      <p><code>y = 6</code></p>
+
+      <p>So one solution is:</p>
+      <p><code>(4, 6)</code></p>
+
+      <p>For <code>x = -1</code>:</p>
+      <p><code>y = -1 + 2</code></p>
+      <p><code>y = 1</code></p>
+
+      <p>So the other solution is:</p>
+      <p><code>(-1, 1)</code></p>
+
+      <p class="answer">Final Answer: (4, 6) and (-1, 1)</p>
+
+      <p>These are the two points where the line and parabola intersect.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Quick Rule Sheet</h2>
+
+    <table>
+      <tr>
+        <th>Topic</th>
+        <th>Rule</th>
+      </tr>
+
+      <tr>
+        <td>Quadratic Function</td>
+        <td>Highest exponent is 2</td>
+      </tr>
+
+      <tr>
+        <td>Standard Form</td>
+        <td>y = ax² + bx + c</td>
+      </tr>
+
+      <tr>
+        <td>Parabola</td>
+        <td>U-shaped graph</td>
+      </tr>
+
+      <tr>
+        <td>Vertex</td>
+        <td>Highest or lowest point</td>
+      </tr>
+
+      <tr>
+        <td>Axis of Symmetry</td>
+        <td>Line that cuts the parabola in half</td>
+      </tr>
+
+      <tr>
+        <td>Opens Upward</td>
+        <td>a is positive</td>
+      </tr>
+
+      <tr>
+        <td>Opens Downward</td>
+        <td>a is negative</td>
+      </tr>
+
+      <tr>
+        <td>Zeros / Roots</td>
+        <td>Where the graph touches or crosses the x-axis</td>
+      </tr>
+
+      <tr>
+        <td>Quadratic Formula</td>
+        <td>x = (-b ± sqrt(b² - 4ac)) / 2a</td>
+      </tr>
+
+      <tr>
+        <td>Vertex Formula</td>
+        <td>x = -b / 2a</td>
+      </tr>
+
+      <tr>
+        <td>Factoring Method</td>
+        <td>Factor, then set each factor equal to zero</td>
+      </tr>
+
+      <tr>
+        <td>Linear/Quadratic System</td>
+        <td>Set both equations equal, solve for x, then find y</td>
+      </tr>
+    </table>
+  </div>
+    <a href="{{ url_for('term_4') }}" class="btn">Back to Term 4</a>
+</div>
+{% endblock %}
