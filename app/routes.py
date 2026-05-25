@@ -215,7 +215,10 @@ def unit_8():
 @app.route('/term_4')
 @login_required
 def term_4():
-    units = ['Unit 9', 'Final Review']
+    units = [
+            {'name': 'Unit 9', 'route': 'unit_9'},
+            {'name': 'Final Review', 'route': 'final_review'} 
+    ]
     return render_template('term_4.html', title='Term 4', units=units)
 
 @app.route('/unit_9')
@@ -224,8 +227,8 @@ def unit_9():
     swbat = 'Fill this in later'
     return render_template('unit_9.html', title='Unit 9', swbat=swbat)
 
-@app.route('/unit_10')
+@app.route('/final_review')
 @login_required
-def unit_10():
+def final_review():
     swbat = 'Fill this in later'
-    return render_template('unit_10.html', title='Final Review', swbat=swbat)
+    return render_template('final_review.html', title='Final Review', swbat=swbat)

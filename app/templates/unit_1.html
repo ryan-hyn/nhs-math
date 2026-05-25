@@ -1,13 +1,192 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="page-container">
-
 <div class="unit-hero">
-    <h2>Unit 1</h2>
-    <p>This unit is currently under construction. Check back soon for SWBATs and lessons!</p>
-    <p>{{ swbat }}</p>
+
+    <h1>Unit 1: Foundations of Algebra</h1>
+
+    <h2>Real Numbers</h2>
+
+    <p>
+        Real numbers are all numbers that can be placed on a number line.
+        They include positive numbers, negative numbers, fractions, decimals, and roots.
+    </p>
+
+    <h3>Types of Real Numbers</h3>
+
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Examples</th>
+        </tr>
+
+        <tr>
+            <td>Natural Numbers</td>
+            <td>Counting numbers starting from 1</td>
+            <td>1, 2, 3, 4</td>
+        </tr>
+
+        <tr>
+            <td>Whole Numbers</td>
+            <td>Natural numbers including 0</td>
+            <td>0, 1, 2, 3</td>
+        </tr>
+
+        <tr>
+            <td>Integers</td>
+            <td>Positive and negative whole numbers</td>
+            <td>-3, -1, 0, 4</td>
+        </tr>
+
+        <tr>
+            <td>Rational Numbers</td>
+            <td>Numbers that can be written as a fraction of two integers</td>
+            <td>1/2, -7/3, 0.25</td>
+        </tr>
+
+        <tr>
+            <td>Irrational Numbers</td>
+            <td>Numbers that cannot be written as a simple fraction</td>
+            <td>π, √2</td>
+        </tr>
+    </table>
+
+    <div class="note">
+        <strong>Note:</strong> √-1 is not a real number. It is an imaginary number.
+    </div>
+
+    <h2>Order of Operations</h2>
+
+    <p>Use PEMDAS:</p>
+
+    <table>
+        <tr>
+            <th>Letter</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>P</td>
+            <td>Parentheses</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>Exponents</td>
+        </tr>
+        <tr>
+            <td>MD</td>
+            <td>Multiplication & Division</td>
+        </tr>
+        <tr>
+            <td>AS</td>
+            <td>Addition & Subtraction</td>
+        </tr>
+    </table>
+
+    <div class="note">
+        Multiplication and division are solved from left to right.
+        Addition and subtraction are also solved from left to right.
+    </div>
+
+    <div class="example">
+        <strong>Examples:</strong><br>
+        7 ÷ 9 × 8 → divide first, then multiply<br><br>
+        54 - 27 + 8 × 5 → multiply first, then left to right
+    </div>
+
+    <h2>Variables and Expressions</h2>
+
+    <p>
+        Variables are letters used to represent unknown numbers.
+    </p>
+
+    <table>
+        <tr>
+            <th>Expression</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>40y</td>
+            <td>40 times y</td>
+        </tr>
+        <tr>
+            <td>40/y</td>
+            <td>40 divided by y</td>
+        </tr>
+        <tr>
+            <td>40 + y</td>
+            <td>40 plus y</td>
+        </tr>
+        <tr>
+            <td>40 - y</td>
+            <td>40 minus y</td>
+        </tr>
+    </table>
+
+    <p>
+        The number attached to a variable is called the coefficient.
+    </p>
+
+    <div class="example">
+        <strong>Examples:</strong><br>
+        40y ÷ 5 = 8y<br>
+        3y × 20 = 60y
+    </div>
+
+    <h3>Why Some Terms Cannot Combine</h3>
+
+    <p>
+        You cannot add or subtract unlike terms because they represent different values.
+    </p>
+
+    <div class="example">
+        7x - 8 cannot simplify further<br>
+        25x - 50y cannot simplify further
+    </div>
+
+    <h2>The Distributive Property</h2>
+
+    <div class="formula">
+        a(b + c) = ab + ac
+    </div>
+
+    <div class="example">
+        4(50x + 200) = 200x + 800<br>
+        2(x + 5) = 2x + 10
+    </div>
+
+    <h3>Factoring</h3>
+
+    <div class="example">
+        3y + 12x + 9 = 3(y + 4x + 3)
+    </div>
+
+    <h2>Combining Like Terms</h2>
+
+    <div class="example">
+        4x + 4x = 8x<br>
+        10k - 3k = 7k
+    </div>
+
+    <h3>Multiplying and Dividing Variables</h3>
+
+    <div class="formula">
+        xᵃ × xᵇ = xᵃ⁺ᵇ
+    </div>
+
+    <div class="example">
+        5y × 8y = 40y²
+    </div>
+
+    <div class="formula">
+        xᵃ ÷ xᵇ = xᵃ⁻ᵇ
+    </div>
+
+    <div class="example">
+        56y ÷ 7y = 8
+    </div>
+
     <a href="{{ url_for('term_1') }}" class="btn">Back to Term 1</a>
-</div>
+
 </div>
 {% endblock %}

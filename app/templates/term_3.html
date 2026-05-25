@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="page-container">
+ <div class="page-container">
 
 <div class="unit-hero">
     <h2>Units for Term 3 may change every year!</h2>
@@ -10,10 +10,8 @@
 
 <div class="unit-grid">
     {% for unit in units %}
-        {% set unit_number = loop.index + 5 %}
-        <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">
-            {{ unit }}
-        </a>
+        {% set unit_number = unit.split(' ')[1] %}
+        <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
     {% endfor %}
 </div>
 <!-- Term Completion Summary / CTA -->

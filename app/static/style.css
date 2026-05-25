@@ -3,6 +3,7 @@
    Hyperspace landing page uses its own CSS files.
    ========================== */
 
+/* =================== GENERAL IMPROVEMENTS =================== */
 
 /* Base body styles */
 body {
@@ -208,8 +209,8 @@ form button:hover {
 /* Make the titles bigger */
 .term-card h2 {
     font-size: 1.9rem;
-    margin-bottom: 15px;      
-    color: #ffffff;           
+    margin-bottom: 15px;       /* nice spacing between title and description */
+    color: #ffffff;            /* explicit color */
 }
 
 /* Make the description text bigger */
@@ -376,7 +377,7 @@ form button:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* ------------------- PAGE CONTAINER ----00--------------- */
+/* ------------------- PAGE CONTAINER ------------------- */
 .page-container {
     min-height: calc(100vh - 205px); /* full viewport minus navbar & some padding */
     display: flex;
@@ -472,3 +473,107 @@ footer {
     color: #e6f2ff;
 }
 
+ /* ==========================
+   UNIT PAGES READABILITY FIX
+   (SAFE: does NOT affect rest of site)
+========================== */
+
+.unit-hero {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 40px 28px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: left;
+    line-height: 1.85;
+}
+
+/* spacing between sections */
+.unit-hero h2 {
+    margin-top: 45px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* spacing consistency */
+.unit-hero h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.unit-hero p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+/* soft table styling ONLY inside units */
+.unit-hero table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 30px 0;
+    font-size: 0.92rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.unit-hero table th,
+.unit-hero table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.unit-hero table th {
+    background: #f5f5f5;
+}
+
+.unit-hero table tr:nth-child(even) {
+    background: #f7faff;
+}
+
+/* notes / examples breathing room */
+.unit-hero .note,
+.unit-hero .example,
+.unit-hero .formula {
+    margin: 18px 0;
+    padding: 14px 16px;
+    border-radius: 6px;
+}
+
+/* slightly softer scroll feel */
+.unit-hero {
+    scroll-behavior: smooth;
+}
+/* ==========================
+   FIX TERM HERO WHITE SPACE
+========================== */
+
+.hero {
+    margin-top: 0 !important;
+}
+
+/* remove default heading push-down */
+.hero h2 {
+    margin-top: 0;
+}
+
+/* tighten welcome block spacing */
+.hero p {
+    margin-bottom: 0;
+}
+
+/* ensure wrapper isn't pushing content down unexpectedly */
+#wrapper {
+    padding-top: 90px; /* keep navbar spacing */
+}
+
+/* optional: normalize hero spacing consistency */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}

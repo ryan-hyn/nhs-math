@@ -1,13 +1,285 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="page-container">
-
 <div class="unit-hero">
-    <h2>Unit 7</h2>
-    <p>This unit is currently under construction. Check back soon for SWBATs and lessons!</p>
-    <p>{{ swbat }}</p>
+    <h1>Unit 7: Properties of Exponents</h1>
+
+  <div class="section">
+    <h2>Main Topics</h2>
+    <ol>
+      <li>Multiplying powers with the same base</li>
+      <li>Dividing powers with the same base</li>
+      <li>Raising a quotient to a power</li>
+      <li>Raising a power to a power</li>
+      <li>Simplifying expressions with powers</li>
+      <li>Simplifying a product raised to a power</li>
+      <li>Zero and negative exponents</li>
+      <li>Evaluating expressions using exponent properties</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>1. Multiplying Powers with the Same Base</h2>
+
+    <p>A <strong>base</strong> is the number or variable being raised to a power.</p>
+
+    <p>Example: In <code>7²</code>, the base is <strong>7</strong>.</p>
+
+    <div class="rule">
+      Rule: xᵃ × xᵇ = xᵃ⁺ᵇ
+    </div>
+
+    <div class="example">
+      <h3>Example</h3>
+      <p>7² × 7⁴</p>
+      <p>Since the bases are both 7, add the exponents:</p>
+      <p>7²⁺⁴ = 7⁶</p>
+      <p>7⁶ = 117,649</p>
+      <p class="answer">Final Answer: 117,649</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. Dividing Powers with the Same Base</h2>
+
+    <p>When dividing powers with the same base, subtract the exponents.</p>
+
+    <div class="rule">
+      Rule: xᵃ ÷ xᵇ = xᵃ⁻ᵇ
+    </div>
+
+    <div class="example">
+      <h3>Example</h3>
+      <p>4⁵ ÷ 4³</p>
+      <p>Since the bases are both 4, subtract the exponents:</p>
+      <p>4⁵⁻³ = 4²</p>
+      <p>4² = 16</p>
+      <p class="answer">Final Answer: 16</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>3. Raising a Quotient to a Power</h2>
+
+    <p>A <strong>quotient</strong> is the answer to a division problem. A fraction is also a quotient.</p>
+
+    <p>When raising a fraction to a power, raise both the numerator and denominator to that power.</p>
+
+    <div class="rule">
+      Rule: (a/b)ⁿ = aⁿ / bⁿ
+    </div>
+
+    <div class="example">
+      <h3>Example</h3>
+      <p>(x/3)² = 16</p>
+      <p>Raise both the top and bottom to the second power:</p>
+      <p>x² / 3² = 16</p>
+      <p>x² / 9 = 16</p>
+      <p>Multiply both sides by 9:</p>
+      <p>x² = 144</p>
+      <p>Take the square root of both sides:</p>
+      <p>x = 12</p>
+      <p class="answer">Final Answer: x = 12</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>4. Raising a Power to a Power</h2>
+
+    <p>When raising a power to another power, multiply the exponents.</p>
+
+    <div class="rule">
+      Rule: (aᵇ)ᶜ = aᵇᶜ
+    </div>
+
+    <div class="example">
+      <h3>Example</h3>
+      <p>(3²)⁴</p>
+      <p>Multiply the exponents:</p>
+      <p>3²ˣ⁴ = 3⁸</p>
+      <p>3⁸ = 6,561</p>
+      <p class="answer">Final Answer: 6,561</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>5. Simplifying an Expression with Powers</h2>
+
+    <div class="example">
+      <h3>Example</h3>
+      <p>(x³ × x⁵) ÷ x²</p>
+      <p>First, multiply the powers on top by adding exponents:</p>
+      <p>x³ × x⁵ = x³⁺⁵ = x⁸</p>
+      <p>Now divide:</p>
+      <p>x⁸ ÷ x² = x⁸⁻²</p>
+      <p>x⁶</p>
+      <p class="answer">Final Answer: x⁶</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>6. Simplifying a Product Raised to a Power</h2>
+
+    <p>When a product is raised to a power, the outside exponent applies to every factor inside the parentheses.</p>
+
+    <div class="rule">
+      Rule: (ab)ⁿ = aⁿbⁿ
+    </div>
+
+    <div class="example">
+      <h3>Example</h3>
+      <p>(2x³y)²</p>
+      <p>Apply the exponent to every factor:</p>
+      <p>2²(x³)²(y)²</p>
+      <p>Simplify each part:</p>
+      <p>2² = 4</p>
+      <p>(x³)² = x⁶</p>
+      <p>y² = y²</p>
+      <p>Put it all together:</p>
+      <p class="answer">Final Answer: 4x⁶y²</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>7. Zero Exponents</h2>
+
+    <p>Any nonzero base raised to the power of zero equals 1.</p>
+
+    <div class="rule">
+      Rule: x⁰ = 1
+    </div>
+
+    <div class="example">
+      <h3>Example</h3>
+      <p>4⁰ = 1</p>
+
+      <p>Look at this pattern:</p>
+      <p>4³ = 64</p>
+      <p>4² = 16</p>
+      <p>4¹ = 4</p>
+      <p>4⁰ = 1</p>
+
+      <p>Each time the exponent goes down by 1, the answer is divided by 4.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>8. Negative Exponents</h2>
+
+    <p>A negative exponent means move the term to the other side of the fraction and make the exponent positive.</p>
+
+    <div class="rule">
+      Rule: x⁻ⁿ = 1 / xⁿ
+    </div>
+
+    <div class="example">
+      <h3>Example</h3>
+      <p>2⁻⁵</p>
+      <p>Rewrite with a positive exponent:</p>
+      <p>1 / 2⁵</p>
+      <p>2⁵ = 32</p>
+      <p class="answer">Final Answer: 1/32</p>
+    </div>
+
+    <div class="example">
+      <h3>Pattern Example</h3>
+      <p>10¹ = 10</p>
+      <p>10⁰ = 1</p>
+      <p>10⁻¹ = 1/10</p>
+      <p>10⁻² = 1/100</p>
+      <p>Each time the exponent goes down by 1, the answer is divided by 10.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>9. Evaluating an Expression Using Multiple Exponent Properties</h2>
+
+    <div class="example">
+      <h3>Example</h3>
+
+      <p>[(2³)((2⁴)²)(3⁰)] ÷ [(2²)(2⁻¹)]</p>
+
+      <p><strong>Step 1:</strong> Simplify the power raised to a power.</p>
+      <p>(2⁴)² = 2⁴ˣ² = 2⁸</p>
+
+      <p><strong>Step 2:</strong> Simplify the zero exponent.</p>
+      <p>3⁰ = 1</p>
+
+      <p>Now the expression becomes:</p>
+      <p>(2³)(2⁸)(1) ÷ (2²)(2⁻¹)</p>
+
+      <p><strong>Step 3:</strong> Multiply powers in the numerator.</p>
+      <p>2³ × 2⁸ = 2³⁺⁸ = 2¹¹</p>
+
+      <p><strong>Step 4:</strong> Multiply powers in the denominator.</p>
+      <p>2² × 2⁻¹ = 2²⁺⁽⁻¹⁾ = 2¹</p>
+
+      <p>Now the expression is:</p>
+      <p>2¹¹ ÷ 2¹</p>
+
+      <p><strong>Step 5:</strong> Divide powers by subtracting exponents.</p>
+      <p>2¹¹⁻¹ = 2¹⁰</p>
+
+      <p><strong>Step 6:</strong> Evaluate.</p>
+      <p>2¹⁰ = 1,024</p>
+
+      <p class="answer">Final Answer: 1,024</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Quick Rule Sheet</h2>
+
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Rule</th>
+        <th>What You Do</th>
+      </tr>
+
+      <tr>
+        <td>Multiplying Powers</td>
+        <td>xᵃ × xᵇ = xᵃ⁺ᵇ</td>
+        <td>Add exponents</td>
+      </tr>
+
+      <tr>
+        <td>Dividing Powers</td>
+        <td>xᵃ ÷ xᵇ = xᵃ⁻ᵇ</td>
+        <td>Subtract exponents</td>
+      </tr>
+
+      <tr>
+        <td>Power to a Power</td>
+        <td>(xᵃ)ᵇ = xᵃᵇ</td>
+        <td>Multiply exponents</td>
+      </tr>
+
+      <tr>
+        <td>Product to a Power</td>
+        <td>(ab)ⁿ = aⁿbⁿ</td>
+        <td>Apply exponent to each factor</td>
+      </tr>
+
+      <tr>
+        <td>Quotient to a Power</td>
+        <td>(a/b)ⁿ = aⁿ / bⁿ</td>
+        <td>Apply exponent to top and bottom</td>
+      </tr>
+
+      <tr>
+        <td>Zero Exponent</td>
+        <td>x⁰ = 1</td>
+        <td>Any nonzero base becomes 1</td>
+      </tr>
+
+      <tr>
+        <td>Negative Exponent</td>
+        <td>x⁻ⁿ = 1 / xⁿ</td>
+        <td>Move to denominator and make positive</td>
+      </tr>
+    </table>
+  </div>
     <a href="{{ url_for('term_3') }}" class="btn">Back to Term 3</a>
-</div>
 </div>
 {% endblock %}

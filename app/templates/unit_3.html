@@ -1,13 +1,92 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="page-container">
-
 <div class="unit-hero">
-    <h2>Unit 3</h2>
-    <p>This unit is currently under construction. Check back soon for SWBATs and lessons!</p>
-    <p>{{ swbat }}</p>
+  <h1>Unit 3: Introduction to Functions</h1>
+
+  <h2>Relations and Functions</h2>
+
+  <p>
+    A relation is a pairing of inputs (x-values) and outputs (y-values).
+    A function is a special relation where each input has exactly one output.
+  </p>
+
+  <h3>Key Terms</h3>
+  <ul>
+    <li><strong>Domain:</strong> all x-values (inputs)</li>
+    <li><strong>Range:</strong> all y-values (outputs)</li>
+  </ul>
+
+  <div class="note">
+    <strong>Vertical Line Test:</strong> If a vertical line touches a graph more than once, it is not a function.
+  </div>
+
+  <p>
+    x-value = input, y-value = output
+  </p>
+
+  <h2>Using Graphs to Relate Quantities</h2>
+
+  <p>
+    Graphs show relationships between two variables, often using tables or real-world data.
+  </p>
+
+  <div class="formula">
+    y = mx + b
+  </div>
+
+  <ul>
+    <li>y = output</li>
+    <li>m = slope (rate of change)</li>
+    <li>x = input</li>
+    <li>b = y-intercept</li>
+  </ul>
+
+  <div class="formula">
+    m = rise / run
+  </div>
+
+  <h2>Patterns and Linear Functions</h2>
+
+  <p>
+    A linear function forms a straight line with a constant rate of change.
+  </p>
+
+  <ul>
+    <li><strong>Linear:</strong> straight line, constant change</li>
+    <li><strong>Non-linear:</strong> curved or changing rate</li>
+  </ul>
+
+  <h2>Graphing a Function Rule</h2>
+
+  <p>Steps to graph a function:</p>
+
+  <ol>
+    <li>Create a table of values</li>
+    <li>Plot ordered pairs (x, y)</li>
+    <li>Connect points (straight line if linear)</li>
+  </ol>
+
+  <div class="example">
+    <strong>Example:</strong><br>
+    y = 2x + 1<br><br>
+    Substitute values for x, solve for y, and plot points.
+  </div>
+
+  <h2>Writing a Function Rule</h2>
+
+  <p>
+    A function rule describes the relationship between x and y.
+    You can also use f(x) instead of y.
+  </p>
+
+  <div class="formula">
+    f(x) = 3x + 2
+  </div>
+
+  <div class="note">
+    Each input (x) produces exactly one output (y).
+  </div>
     <a href="{{ url_for('term_1') }}" class="btn">Back to Term 1</a>
-</div>
 </div>
 {% endblock %}
