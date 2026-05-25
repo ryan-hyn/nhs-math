@@ -584,3 +584,134 @@ footer {
         overflow-x: auto;
     }
 }
+.graph-img {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.examples-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.example-byside {
+    width: 350px;
+    text-align: center;
+}
+
+.center-table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.center-table th,
+.center-table td {
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.table-byside {
+    width: 350px;
+    text-align: center;
+}
+
+.graph-table-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+.graph-box,
+.table-box {
+    width: 150px;
+    text-align: center;
+}
+
+.graph-img-box {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.fraction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fraction span:first-child {
+    border-bottom: 2px solid black;
+    padding: 0 10px 4px 10px;
+}
+
+.fraction span:last-child {
+    padding-top: 4px;
+}
+
+.linear-table-graph {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: flex-start;
+    width: 100%;
+    text-align: center;
+}
+
+.table-side {
+    position: relative;
+    top: 127px;
+}
+.graph-side {
+    width: 350px;
+    text-align: center;
+}
+
+.table-side p,
+.graph-side p {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.slope-formula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.steps-to-picture {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.graph-side p,
+.steps-side p {
+    width: 450px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.formula-byside {
+    width: 350px;
+    text-align: center;
+}
