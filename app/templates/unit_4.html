@@ -19,45 +19,82 @@
     <div class="section">
       <h2>Rate of Change and Slope</h2>
 
+      <p><strong>Slope:</strong> how steep a line of a function is</p>
+
       <h3>Slope Formula</h3>
-      <div class="formula">
-        m = (y₂ - y₁) / (x₂ - x₁)
+      <div class="slope-formula">
+        <span>m =</span>
+
+        <div class="fraction">
+          <span>(y₂ - y₁)</span>
+          <span>(x₂ - x₁)</span>
+        </div>
       </div>
 
-      <p>Slope tells us how steep a line is.</p>
+      <p>This can also be written as...</p>
 
-      <div class="formula">
-        slope = rise / run
+      <div class="slope-formula">
+        <span>slope =</span>
+
+        <div class="fraction">
+          <span>rise</span>
+          <span>run</span>
+        </div>
       </div>
 
-      <ul>
-        <li><strong>Rise</strong> = how much the line moves up or down</li>
-        <li><strong>Run</strong> = how much the line moves left or right</li>
-      </ul>
+      <p>
+        <strong>Rise:</strong> how much the line moves up or down<br>
+        <strong>Run:</strong> how much the line moves left or right<br>
+      </p>
 
-      <h3>Rate of Change</h3>
-      <p>Rate of change tells us how much one quantity changes compared to another.</p>
+      <h3>Rate of Change</h3><br>
+      <strong>Rate of Change:</strong> how much y changes compared to how much x changes<br>
 
-      <div class="formula">
-        Rate of Change = change in y / change in x
+      <div class="slope-formula">
+        <span>Rate of Change =</span>
+
+        <div class="fraction">
+          <span>change in y</span>
+          <span>change in x</span>
+        </div>
       </div>
+      <br>
 
-      <p>In Algebra 1, rate of change and slope usually mean the same thing.</p>
+      <p>In Algebra 1, rate of change and slope mean the <strong>same thing.</strong></p>
     </div>
 
     <div class="section">
       <h2>Finding Slope</h2>
 
       <h3>From a Graph</h3>
-      <ol>
-        <li>Start at one clear point on the line.</li>
-        <li>Move to another clear point.</li>
-        <li>Count how far you move up or down.</li>
-        <li>Count how far you move right.</li>
-        <li>Write it as rise over run.</li>
-      </ol>
+      
+      <div class="steps-to-picture">
+        
+        <div class="steps-side">
+          <p>
+            Step 1: Start at one clear point on the line where x and y are whole numbers<br><br>
+            Step 2: Move to the next clear point
+            <o>
+              <li>Count how far you move up or down</li>
+              <li>Count how far you move right</li>
+            </o>
+            <br>
+            Step 3: Write it as rise over run.</li>
+          </p>
+        </div>
+        
+        <div class="graph-side">
+          <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-riserun.jpg') }}" alt="Picture of a graph">
+          <p><strong>Note:</strong> graphs should be read from <strong>left to right</strong>.</p>
+        </div>
 
-      <p>Graphs should be read from <strong>left to right</strong>.</p>
+      </div>
+
+      <p>Using our steps, we can determine that when x moves 2 to the right, y moves up by 1.<br>
+        Therefore, using rise/over, we can identify our slope as 1/2
+      </p>
+      <br>
+      <strong>IMPORTANT INFO</strong>
 
       <ul>
         <li>If the line goes up, the slope is positive.</li>
@@ -66,173 +103,259 @@
       </ul>
 
       <h3>From a Table</h3>
-      <p>To find slope from a table, divide the change in y by the change in x.</p>
+      <p>To find slope from a table, divide the change in y by the change in x.</p><br><br>
+      <strong>Example:</strong>
 
-      <table>
+      <table class="center-table">
         <tr>
           <th>x</th>
-          <th>y</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>3</td>
-        </tr>
-        <tr>
+          <td>0</td>
           <td>2</td>
-          <td>5</td>
+          <td>4</td>
+          <td>6</td>
         </tr>
+
         <tr>
-          <td>3</td>
-          <td>7</td>
+          <th>y</th>
+          <td>6</td>
+          <td>14</td>
+          <td>22</td>
+          <td>30</td>
         </tr>
       </table>
 
+      <div class="examples-row"> 
+        <div class="formula-byside">
+          <strong>Formula</strong>
+          
+          <div class="slope-formula">
+            <div class="fraction">
+              <span>(y₂ - y₁)</span>
+              <span>(x₂ - x₁)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="formula-byside">
+          <strong>Substitute our values in</strong>
+            
+          <div class="slope formula">
+            <div class="fraction">
+              <span>(14 - 6)</span>
+              <span>(2 - 0)</span>
+            </div>
+
+            <span>=</span>
+
+            <div class="fraction">
+              <span>8</span>
+              <span>2</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+
       <div class="example">
-        The y-values go up by 2.<br>
-        The x-values go up by 1.<br>
-        So the slope is 2 / 1 = 2.
+        The y-values go up by 8.<br>
+        The x-values go up by 2.<br>
+        The slope is 4.
       </div>
-
-      <h3>From an Equation</h3>
-      <p>If the equation is in slope-intercept form:</p>
-
-      <div class="formula">
-        y = mx + b
-      </div>
-
-      <p>Then <strong>m</strong> is the slope.</p>
 
       <h3>From Two Points</h3>
-      <div class="formula">
-        m = (y₂ - y₁) / (x₂ - x₁)
+      <strong>Example:</strong>
+
+      <div class="steps-to-picture">
+
+        <div class="steps-side">
+          <div class="slope-formula">
+            <span>m =</span>
+
+            <div class="fraction">
+              <span>(y₂ - y₁)</span>
+              <span>(x₂ - x₁)</span>
+            </div>
+          </div>
+
+              <div class="slope-formula">
+                <span>m =</span>
+
+                <div class="fraction">
+                  <span>(3 - 5)</span>
+                  <span>(3 - (-1))</span>
+                </div>
+              </div>
+
+              <div class="slope-formula">
+                <span>m =</span>
+
+                <div class="fraction">
+                  <span>-2</span>
+                  <span>4</span>
+                </div>
+              </div>
+
+          <p>The slope is <strong>-1/2</strong></p>
+
+        </div>
+        
+        <div class="graph-side">
+          <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-pointstwo.jpg') }}" alt="Picture of a graph">
+          <p><strong>Points:</strong> (-1, 5) and (3, 3)</p>
+        </div>
+
       </div>
 
-      <div class="example">
-        Points: (2, 4) and (6, 12)<br>
-        m = (12 - 4) / (6 - 2)<br>
-        m = 8 / 4<br>
-        m = 2
-      </div>
     </div>
 
     <div class="section">
-      <h2>Rate of Change Word Problem Example</h2>
+      <h3>Rate of Change (Word Problem)</h3>
+      <strong>Example:</strong>
 
       <div class="example">
         A car travels 120 miles in 2 hours. What is the rate of change?<br><br>
         rate = distance / time<br>
         rate = 120 / 2<br>
-        rate = 60
-      </div>
+        rate = 60mph
+      </div><br>
 
-      <p>The car travels <strong>60 miles per hour</strong>.</p>
+      <p><strong>Note:</strong> on a graph, time is always represented by x values mostly because time can't be manipulated--it's always constant.</p>
     </div>
 
     <div class="section">
       <h2>Slope-Intercept Form</h2>
 
       <div class="formula">
+        <span><strong>Formula:</strong></span>
         y = mx + b
       </div>
 
       <ul>
-        <li><strong>m</strong> = slope</li>
-        <li><strong>b</strong> = y-intercept</li>
-        <li><strong>y-intercept</strong> = where the line crosses the y-axis</li>
+        <strong>y:</strong> y-value<br>
+        <strong>m:</strong> slope<br>
+        <strong>x:</strong> x-value<br>
+        <strong>b:</strong> y-intercept<br>
       </ul>
 
-      <h3>Writing an Equation from a Graph</h3>
-      <ol>
-        <li>Find the y-intercept.</li>
-        <li>Find the slope.</li>
-        <li>Plug them into y = mx + b.</li>
-      </ol>
+      <h3>Writing an Equation from a Graph/Table</h3>
+      <p>
+        Step 1: Find the y-intercept (the y value when x = 0)
+        <br>
+        
+        <div class="slope-formula">
+          <span>Step 2: Find the slope; m =</span>
+
+          <div class="fraction">
+            <span>(y₂ - y₁)</span>
+            <span>(x₂ - x₁)</span>
+          </div>
+        </div><br>
+
+        Step 3: Plug them into y = mx + b.
+      </p>
 
       <div class="example">
         If the slope is 2/3 and the y-intercept is 4:<br>
         y = 2/3x + 4
       </div>
 
-      <h3>Writing an Equation from a Table</h3>
-      <ol>
-        <li>Find the y-intercept, usually when x = 0.</li>
-        <li>Find the slope using change in y over change in x.</li>
-        <li>Plug the slope and y-intercept into y = mx + b.</li>
-      </ol>
-
       <h3>Horizontal and Vertical Lines</h3>
-      <p>A horizontal line looks like:</p>
-      <div class="formula">y = number</div>
 
-      <p>A vertical line looks like:</p>
-      <div class="formula">x = number</div>
+      <div class="examples-row">
+        <div class="example-byside">
+          <p>A <strong>horizontal line</strong> looks like: y = (number)</p><br>
+      
+          <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-horizontal.jpg') }}" alt="Picture of a graph">
+
+          <p>y = 4</p>
+          <br>
+        </div>
+
+        <div class="example-byside">
+          <p>A <strong>vertical line</strong> looks like: x = (number)</p><br>
+
+          <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-vertical.jpg') }}" alt="Picture of a graph">
+
+          <p>x = 2</p>
+          <br>
+        </div>
+      </div>
+
     </div>
 
     <div class="section">
       <h2>Standard Form</h2>
 
-      <div class="formula">
-        Ax + By = C
-      </div>
+      <table class="center-table">
+        <tr>
+          <th>Formula</th>
+          <td>Ax + By = C</td>
+        </tr>
 
-      <ul>
-        <li><strong>A</strong> = number in front of x</li>
-        <li><strong>B</strong> = number in front of y</li>
-        <li><strong>C</strong> = number by itself</li>
-      </ul>
-
-      <div class="example">
-        Example: 2x + 3y = 12<br><br>
-        A = 2<br>
-        B = 3<br>
-        C = 12
-      </div>
+        <tr>
+          <th>Example:</th>
+          <td>2x + 3y = 12</td>
+        </tr>
+      </table>
 
       <h3>Writing Standard Form from a Graph</h3>
-      <div class="example">
-        Suppose the graph has a y-intercept of 4 and a slope of 2/3.<br><br>
-        First write slope-intercept form:<br>
-        y = 2/3x + 4<br><br>
-        Multiply everything by 3:<br>
-        3y = 2x + 12<br><br>
-        Move the x-term to the left side:<br>
-        -2x + 3y = 12<br><br>
+      <div class="steps-to-picture">
+
+        <div class="steps-side">
+          <p>
+            Step 1: Calculate the slope using rise / run<br>
+            - The rise goes infront of x, and the run infront of y → run(y) + rise(x)<br>
+            - In this problem, it'll be 3y - 2x because the function goes down by 2 for every 3 to the right<br><br>
+            Step 2: Calculate the y-intercept by multiplying 'run' by the y-intercept<br>
+            - In this problem, it'll be 3 (the 'run' value) &times; 4 (the y-intercept) giving us 12<br><br>
+            Step 3: Combine our equation together<br>
+            - The Standard From equation to this graph is 3y - 2x = 12
+          </p>
+
+        </div>
+        
+        <div class="graph-side">
+          <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-standardform.jpg') }}" alt="Picture of a graph">
+        </div>
+
       </div>
 
       <h3>Rewriting Standard Form into Slope-Intercept Form</h3>
+      <p>The goal is to <strong>isolate y.</strong></p>
       <div class="example">
-        Example: 6y - 3x = 12<br><br>
-        Add 3x to both sides:<br>
-        6y = 3x + 12<br><br>
-        Divide everything by 6:<br>
-        y = 1/2x + 2
+        <strong>Example:</strong> 6y - 3x = 12<br><br>
+        Step 1: Add 3x to both sides → 6y = 3x + 12<br><br>
+        Step 2: Divide both sides by 6 → y = 1/2(x) + 2 <br>
       </div>
     </div>
 
     <div class="section">
       <h2>Parallel and Perpendicular Lines</h2>
 
-      <h3>Parallel Lines</h3>
-      <p>Parallel lines have the <strong>same slope</strong> but different y-intercepts.</p>
+      <div class="examples-row">
+        <div class="example-byside">
+          <h3>Parallel</h3><br>
+          <p>Parallel lines have the <strong>same slope</strong> but different y-intercepts.</p>
+          <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-parallel.jpg') }}" alt="Picture of a graph">
+          <p>y = 2x + 5 is parallel to y = 2x + 9</p>
 
-      <div class="example">
-        y = 2x + 5 is parallel to y = 2x + 9
+        </div><br>
+
+        <div class="example-byside">
+          <h3>Perpendicular</h3><br>
+          <p>Perpendicular lines have slopes that are <strong>opposite reciprocals.</strong></p>
+          <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-vertical.jpg') }}" alt="Picture of a graph">
+          <p>y = 4/7x + 5 is perpendicular to y = -7/4x + 5</p>
+
+        </div><br>
       </div>
-
-      <h3>Perpendicular Lines</h3>
-      <p>Perpendicular lines have slopes that are <strong>opposite reciprocals</strong>.</p>
 
       <p>To find the opposite reciprocal:</p>
       <ol>
         <li>Flip the fraction.</li>
         <li>Change the sign.</li>
       </ol>
-
-      <div class="example">
-        4/7 becomes -7/4<br><br>
-        y = 4/7x + 5 is perpendicular to y = -7/4x + 5
-      </div>
-    </div>
 
     <div class="section">
       <h2>Arithmetic Sequences</h2>

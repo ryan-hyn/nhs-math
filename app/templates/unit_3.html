@@ -4,89 +4,399 @@
 <div class="unit-hero">
   <h1>Unit 3: Introduction to Functions</h1>
 
-  <h2>Relations and Functions</h2>
+  <h2>Main Topics</h2>
+    <ul>
+      <li>Relations and Functions</li>
+      <li>Using Graphs to Relate Two Quantities</li>
+      <li>Patterns and Linear Functions</li>
+      <li>Graphing a Function Rule</li>
+      <li>Writing a Function Rule</li>
+    </ul>
 
-  <p>
-    A relation is a pairing of inputs (x-values) and outputs (y-values).
-    A function is a special relation where each input has exactly one output.
-  </p>
+  <h2>Relations and Functions</h2>
 
   <h3>Key Terms</h3>
   <ul>
-    <li><strong>Domain:</strong> all x-values (inputs)</li>
-    <li><strong>Range:</strong> all y-values (outputs)</li>
+    <strong>Function:</strong> a special relation where each input has exactly one output<br>
+    <strong>Relation:</strong> a relation is a pairing of inputs (x-values) and outputs (y-values)<br>
+    <strong>Domain:</strong> all x-values (inputs) that go left to right on a graph<br>
+    <strong>Range:</strong> all y-values (outputs) that go up and down on a graph<br>
+    <strong>x-axis:</strong> horizontal line placed at y = 0. It separates the negative y values from the positive<br>
+    <strong>y-axis:</strong> vertical line placed at x = 0. It separates the negative x values from the positive<br>
+    <strong>x-intercept:</strong> the x value when y = 0. It crosses the graph from negative to positive y values<br>
+    <strong>y-intercept:</strong> the y value when x = 0. It crosses the graph from negative to positive x values
   </ul>
 
-  <div class="note">
-    <strong>Vertical Line Test:</strong> If a vertical line touches a graph more than once, it is not a function.
-  </div>
+  <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-final-better.jpg') }}" alt="Picture of a graph">
+  <br>
+  <p>This graphed function is represented by, x = y. Looking at the graph, we can tell this by picking an x value and<br>
+    matching it to the y value that intersects with the graph. On the graph, when x = 2, y = 2. When x = 0, y = 0.</p>
+  <br>
+  <h3>Vertical Line Test</h3>
 
-  <p>
-    x-value = input, y-value = output
+  <p>A function <strong>doesn't exist</strong> if an x value corresponds with two y values. We can use to <strong>Vertical Line Test</strong> in order to<br>
+  check if a line on a graph is a function or not. The test is to draw a straight vertical line on the graph: if the equation touches the line more than once,<br>
+  then the equation is not a function.
   </p>
+  <br>
+
+  <div class="example">
+    <strong>Example:</strong> y<sup>2</sup> + x<sup>2</sup> = 9 (red line) <br>
+  </div>
+  <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-nonfunction.jpg') }}" alt="Picture of a graph">
+  <br>
+  <p>Drawing a line at x = 1 (blue line), it crosses the graphed equation twice meaning this is <strong>NOT</strong> a function.</p>
+  <br>
+
+  <div class="examples-row">
+    <div class="example-byside">
+      <strong>Example:</strong><br> y = 3x + 6 (blue line) <br>
+      
+      <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-functionone.jpg') }}" alt="Picture of a graph">
+
+      <p>Drawing a line at x = -1 (green line), it crosses the graphed equation once meaning this <strong>IS</strong> a function.</p>
+      <br>
+    </div>
+
+    <div class="example-byside">
+      <strong>Example:</strong><br> y = &radic;<span>|x|</span> (blue line) <br>
+
+      <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-functiontwo.jpg') }}" alt="Picture of a graph">
+
+      <p>Drawing a line at x = 4 (green line), it crosses the graphed equation once meaning this <strong>IS</strong> a function.</p>
+      <br>
+    </div>
+  </div>
 
   <h2>Using Graphs to Relate Quantities</h2>
 
   <p>
-    Graphs show relationships between two variables, often using tables or real-world data.
+    Graphs aren't the only way to show a relation between x and y values--a table could be used aswell!
   </p>
 
-  <div class="formula">
-    y = mx + b
+  <h3>Tables</h3>
+
+  <p><strong>Example:</strong> y = -1/2(x) + 3</p>
+  
+  <table class="center-table">
+    <tr>
+      <th>x</th>
+      <td>-4</td>
+      <td>-2</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <th>y</th>
+      <td>5</td>
+      <td>4</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+  </table>
+
+  <p>Looking at the table, you can input any x value you desire into the equation, <br>
+    and your answer (y output) goes into the other row of the table.</p>
+
+  <h3>Function vs. Non-function (Table)</h3>
+
+  <p>Remember, one x value cannot correspond with two y values, but the opposite is ok.</p><br>
+
+  <div class="examples-row"> 
+
+    <div class="table-byside">
+      <strong>NOT a function</strong>
+        
+      <table class="center-table">
+        <tr>
+          <th>x</th>
+          <td>13</td>
+          <td>3</td>
+          <td>4</td>
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <th>y</th>
+          <td>1</td>
+          <td>8</td>
+          <td>3</td>
+          <td>-3</td>
+        </tr>
+      </table>
+
+      <p>One x value (4) correspond with two y values (3 and -3). This table doesn't represent a function.</p>
+
+    </div><br>
+
+    <div class="table-byside">
+      <strong>IS a function</strong>
+          
+      <table class="center-table">
+        <tr>
+          <th>x</th>
+          <td>-6</td>
+          <td>-1</td>
+          <td>5</td>
+          <td>8</td>
+        </tr>
+
+        <tr>
+          <th>y</th>
+          <td>18</td>
+          <td>-2</td>
+          <td>7</td>
+          <td>7</td>
+        </tr>
+      </table>
+
+      <p>Two separate x-values (5 and 8) correspond with 7. This table represents a function.</p>
+
+    </div>
+  
   </div>
 
-  <ul>
-    <li>y = output</li>
-    <li>m = slope (rate of change)</li>
-    <li>x = input</li>
-    <li>b = y-intercept</li>
-  </ul>
-
-  <div class="formula">
-    m = rise / run
-  </div>
-
-  <h2>Patterns and Linear Functions</h2>
-
-  <p>
-    A linear function forms a straight line with a constant rate of change.
-  </p>
-
-  <ul>
-    <li><strong>Linear:</strong> straight line, constant change</li>
-    <li><strong>Non-linear:</strong> curved or changing rate</li>
-  </ul>
-
-  <h2>Graphing a Function Rule</h2>
-
-  <p>Steps to graph a function:</p>
-
-  <ol>
-    <li>Create a table of values</li>
-    <li>Plot ordered pairs (x, y)</li>
-    <li>Connect points (straight line if linear)</li>
-  </ol>
+  <h3>Match a Table and a Graph</h3>
 
   <div class="example">
-    <strong>Example:</strong><br>
-    y = 2x + 1<br><br>
-    Substitute values for x, solve for y, and plot points.
+    <strong>Example:</strong>
   </div>
+
+  <div class="graph-table-row">
+    
+    <table class="table-box">
+      <tr>
+        <th>x</th>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+
+      <tr>
+        <th>y</th>
+        <td>2</td>
+        <td>5</td>
+        <td>8</td>
+        <td>11</td>
+      </tr>
+    </table>
+
+    <div class="graph-box">
+      <img class="graph-img-box" src="{{ url_for('static', filename='images/desmos-graph-table1.jpg') }}" alt="Picture of a graph">
+    </div>
+
+    <div class="graph-box">
+      <img class="graph-img-box" src="{{ url_for('static', filename='images/desmos-graph-table2.jpg') }}" alt="Picture of a graph">
+    </div>
+
+    <div class="graph-box">
+      <img class="graph-img-box" src="{{ url_for('static', filename='images/desmos-graph-table3.jpg') }}" alt="Picture of a graph">
+    </div>
+
+    <div class="graph-box">
+      <img class="graph-img-box" src="{{ url_for('static', filename='images/desmos-graph-table4.jpg') }}" alt="Picture of a graph">
+    </div>
+
+  </div>
+
+  <p><strong>How to match a graph and a table</strong></p><br><br>
+  
+  <p><strong>Method 1</strong></p>
+  <p>Step 1: Calculate how much y increases or decreases when x goes up <br>
+  - based on the table, every time x goes up by 1, y goes up by 3 <br><br>
+  Step 2: Match the values of the <strong>y-intercept</strong> meaning, the y value when x = 0 <br>
+  - based on the table, when x = 0, y = 2. The right graph will show the function crossing the y-axis at y = 2 <br><br>
+  Combining our findings together, the table should match the <strong>second graph</strong> because on the graph, <br>
+  The function crosses the y-axis at y = 2, and every time x goes up by 1, y goes up by 3.</p><br><br>
+
+  <p><strong>Method 2</strong></p>
+  <p>Step 1: On each graph, pick an x value, draw a line until it hits the function and see what the y value is <br>
+  Step 2: Compare your answers from each graph to the table. Whichever one fits is your answer!</p>
+
+  <h2>Patterns and Linear Functions</h2>
+  <br>
+  <h3>Key Terms</h3>
+  <ul>
+    <strong>Linear Function:</strong> a function that creates a straight line (constant rate of change)<br>
+    <strong>Non-linear Function:</strong> a curved function (varying rate of change)<br>
+    <strong>Rate of Change:</strong> how much y changes compared to how much x changes<br>
+    <strong>Slope:</strong> the rate of change represented by:<br>
+    <div class="fraction">
+      <span>Change in y</span>
+      <span>Change in x</span>
+    </div>
+  </ul>
+
+  <p>
+    <strong>A linear function is represented by the formula:</strong><br>
+    y = mx + b
+  </p>
+
+  <ul>
+    <strong>y:</strong> y-value<br>
+    <strong>m:</strong> slope<br>
+    <strong>x:</strong> x-value<br>
+    <strong>b:</strong> y-intercept<br>
+  </ul>
+
+  <h3>Linear Function</h3>
+
+  <div class="example">
+    <strong>Example:</strong>
+  </div>
+
+  <div class="linear-table-graph">
+    
+    <div class="table-side">
+      <table class="center-table">
+        <tr>
+          <th>x</th>
+          <td>0</td>
+          <td>2</td>
+          <td>4</td>
+          <td>6</td>
+        </tr>
+
+        <tr>
+          <th>y</th>
+          <td>6</td>
+          <td>14</td>
+          <td>22</td>
+          <td>30</td>
+        </tr>
+      </table>
+    
+      <p>
+        Starting from 6, the y value goes up by 8 everytime the
+        x value goes up by 2. This table represents a <strong>linear function.</strong>
+      </p>
+    </div>
+
+    <div class="graph-side">
+      <img class="graph-img-box" src="{{ url_for('static', filename='images/desmos-linear.jpg') }}" alt="Picture of a graph">
+
+      <p>
+        The graph shows a straight line, or a constant rate of change <br>
+        proving that it represents a <strong>linear function</strong>
+      </p>
+    </div>
+
+  </div>
+
+  <h3>Non-linear Function</h3>
+
+  <div class="example">
+    <strong>Example:</strong>
+  </div>
+
+  <div class="linear-table-graph">
+    
+    <div class="table-side">
+      <table class="center-table">
+        <tr>
+          <th>x</th>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+
+        <tr>
+          <th>y</th>
+          <td>9</td>
+          <td>16</td>
+          <td>25</td>
+          <td>36</td>
+        </tr>
+      </table>
+    
+      <p>
+        Starting from 9, the y value goes up by various increasing amounts while the
+        x value goes up by 1 each time. This table represents a <strong>non-linear function.</strong>
+      </p>
+    </div>
+
+    <div class="graph-side">
+      <img class="graph-img-box" src="{{ url_for('static', filename='images/desmos-nonlinear.jpg') }}" alt="Picture of a graph">
+
+      <p>
+        The graph shows a curved line, or a various rate of change <br>
+        proving that it represents a <strong>non-linear function</strong>
+      </p>
+    </div>
+
+  </div>
+  <br>
+  <h2>Graphing a Function Rule</h2>
+
+  <h3>Key Terms</h3>
+  <ul>
+    <strong>Ordered Pair:</strong> two numbers usually (x, y) that mark a coordinate or a point on a graph
+  </ul>
+
+  <h3>From a Table</h3>
+  <p><strong>Remember:</strong> one x value cannot have two corresponding y values<p><br>
+
+  <p>
+    Step 1: Create a table of values. One row represents x values, the other row y values<br>
+    Step 2: Plot <strong>ordered pairs (x, y)</strong> on a graph by marking the coordinate with a point<br>
+    Step 3: Connect points with a line (straight line if the function's linear)<br>
+  </p>
+
+  <h3>From an Equation</h3>
+  <p><strong>Example:</strong> y = -2x + 3</p><br>
+
+  <p>
+    Step 1: Select a few x values and plug them into the equation (Recommend using 4 values that are near each other)<br>
+    Step 2: Using the answers, create ordered pairs and plot the coordinates on the graph<br>
+    Step 3: Connect points with a line (straight line if the function's linear)
+  </p><br>
+
+  <p>To show an example, I'll use the x values: 1, 2, 3, and 4 
+    and plug it into the last example's equation (y = -2x + 3)
+  </p><br>
+
+  <ul>
+    <strong>(1, y):</strong> -2(1) + 3 = 1<br>
+    <strong>(2, y):</strong> -2(2) + 3 = -1<br>
+    <strong>(3, y):</strong> -2(3) + 3 = -3<br>
+    <strong>(4, y):</strong> -2(4) + 3 = -5<br>
+  </ul>
+
+
+  <div class="examples-row">
+    <div class="example-byside">
+      <strong>Step 2</strong><br>
+      <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-points.jpg') }}" alt="Picture of a graph">
+      <P>Ordered pair at: (1, 1) (2, -1) (3, -3) (4, -5)</P>
+    </div>
+
+    <div class="example-byside">
+      <strong>Step 3</strong><br>
+      <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-pointsconnect.jpg') }}" alt="Picture of a graph">
+    
+    </div>
+  </div><br>
 
   <h2>Writing a Function Rule</h2>
 
   <p>
-    A function rule describes the relationship between x and y.
-    You can also use f(x) instead of y.
-  </p>
+    A function is written as either equal to y, or by the <strong>function notation: f(x)</strong>.
+  </p><br>
 
   <div class="formula">
-    f(x) = 3x + 2
+    <strong>f(x) = 3x + 2</strong>
   </div>
+  <br>
 
-  <div class="note">
-    Each input (x) produces exactly one output (y).
-  </div>
+  <p>
+    <strong>Note:</strong> since each input (x) produces exactly one output (y), <br>
+    y should never be raised to a power above 1. Doing so means that an x value can have multiple corresponding y values.
+  </p>
+
+  <br>
     <a href="{{ url_for('term_1') }}" class="btn">Back to Term 1</a>
 </div>
 {% endblock %}
