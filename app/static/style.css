@@ -715,3 +715,36 @@ footer {
     width: 350px;
     text-align: center;
 }
+/* ===================================================
+   LOGIN PAGE SPLIT-SCREEN FIX
+   =================================================== */
+
+/* 1. Remove the 110px top margin only for the login page element */
+#top-nav + .login-page-split,
+.login-page-split {
+    margin-top: 0px !important;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* Create a flawless split background: top half matches your nav blue, bottom is white */
+    background: linear-gradient(to bottom, #004080 50%, #ffffff 50%) !important;
+}
+
+/* 2. Flatten the hero box so it stretches completely across the top blue half */
+.login-page-split .hero {
+    background: transparent !important; /* Removes inner gradient conflict */
+    border-radius: 0px !important;       /* Removes rounded corners on the background */
+    margin-bottom: 0px !important;      /* Removes spacing that breaks the cut line */
+    padding: 80px 20px 40px 20px !important; /* Positions text perfectly below navbar */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 3. Ensure the form floats naturally on the bottom white half */
+.login-page-split main.form-container {
+    margin: 20px auto 60px auto !important; /* Centers the white card on the bottom half */
+}
