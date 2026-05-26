@@ -1,23 +1,54 @@
 {% extends "base.html" %}
 
 {% block content %}
- <div class="page-container">
+<div class="page-container">
 
-<div class="unit-hero">
-    <h2>Units for Term 4 can vary each year!</h2>
-    <p>Your teacher will inform you which unit to start with, or explore the next unit below.</p>
+    <div class="unit-hero">
+        <h2>Units for Term 4 may vary each year!</h2>
+        <p>Your teacher can guide you to the correct unit, or you can navigate to the next unit below.</p>
+    </div>
+
+    <div class="unit-grid">
+        {% set units = [
+            {'name': 'Unit 9', 'route': 'unit_9'},
+            {'name': 'Final Review', 'route': 'final_review'} 
+        ] %}
+        {% for unit in units %}
+            <a href="{{ url_for(unit.route) }}" class="unit-card tracker-link" data-unit="term4-{{ unit.route }}">{{ unit.name }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="term-summary">
+        <p>You’ve completed <strong id="completed-counter-t4">0</strong> of <strong id="total-counter-t4">{{ units|length }}</strong> units this term.</p>
+        <a href="{{ url_for('index') }}" class="btn">Go to Dashboard</a>
+    </div>
 </div>
 
-<div class="unit-grid">
-    {% for unit in units %}
-        <a href="{{ url_for(unit.route) }}" class="unit-card">
-            {{ unit.name }}</a>
-    {% endfor %}
-</div>
-<!-- Term Completion Summary / CTA -->
-<div class="term-summary">
-    <p>You’ve completed <strong>2 of {{ units|length }}</strong> units this term.</p>
-    <a href="{{ url_for('index') }}" class="btn">Go to Dashboard</a>
-</div>
-</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const unitLinks = document.querySelectorAll('.tracker-link');
+    const counterElement = document.getElementById('completed-counter-t4');
+    
+    function updateCompletionCount() {
+        let completedCount = 0;
+        unitLinks.forEach(link => {
+            const unitKey = link.getAttribute('data-unit');
+            if (localStorage.getItem(unitKey) === 'true') {
+                completedCount++;
+                link.style.borderLeft = "6px solid #4caf50"; 
+            }
+        });
+        counterElement.textContent = completedCount;
+    }
+
+    unitLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const unitKey = this.getAttribute('data-unit');
+            localStorage.setItem(unitKey, 'true');
+        });
+    });
+
+    updateCompletionCount();
+});
+</script>
 {% endblock %}

@@ -2,25 +2,56 @@
 
 {% block content %}
 
-<!-- Hero section -->
- <div class="page-container">
-<div class="unit-hero">
-    <h2>Welcome to Term 1 Units!</h2>
-    <p>Units may shift from year to year. Your teacher can guide you to your current unit, or you can explore the next unit below.</p>
+<div class="page-container">
+    <div class="unit-hero">
+        <h2>Welcome to Term 1 Units!</h2>
+        <p>Units may shift from year to year. Your teacher can guide you to your current unit, or you can explore the next unit below.</p>
+    </div>
+
+    <div class="unit-grid">
+        {% set units = ['Unit 1', 'Unit 2', 'Unit 3'] %}
+        {% for unit in units %}
+            {% set unit_number = loop.index %}
+            <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card tracker-link" data-unit="term1-unit{{ unit_number }}">{{ unit }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="term-summary">
+        <p>You’ve completed <strong id="completed-counter">0</strong> of <strong id="total-counter">{{ units|length }}</strong> units this term.</p>
+        <a href="{{ url_for('index') }}" class="btn">Go to Dashboard</a>
+    </div>
 </div>
 
-<!-- Grid of unit cards -->
-<div class="unit-grid">
-    {% for unit in units %}
-        {% set unit_number = loop.index %}
-        <a href="{{ url_for('unit_' ~ unit_number) }}" class="unit-card">{{ unit }}</a>
-    {% endfor %}
-</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const unitLinks = document.querySelectorAll('.tracker-link');
+    const counterElement = document.getElementById('completed-counter');
+    
+    // 1. Check browser history memory to count how many units have been visited
+    function updateCompletionCount() {
+        let completedCount = 0;
+        unitLinks.forEach(link => {
+            const unitKey = link.getAttribute('data-unit');
+            if (localStorage.getItem(unitKey) === 'true') {
+                completedCount++;
+                // Optional UI touch: add a visual 'completed' style to cards already clicked
+                link.style.borderLeft = "6px solid #4caf50"; 
+            }
+        });
+        counterElement.textContent = completedCount;
+    }
 
-<!-- Term Completion Summary / CTA -->
-<div class="term-summary">
-    <p>You’ve completed <strong>2 of {{ units|length }}</strong> units this term.</p>
-    <a href="{{ url_for('index') }}" class="btn">Go to Dashboard</a>
-</div>
-</div>
+    // 2. When a freshman clicks a unit link, mark it as completed/visited in browser storage
+    unitLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const unitKey = this.getAttribute('data-unit');
+            localStorage.setItem(unitKey, 'true');
+        });
+    });
+
+    // 3. Run the count right when they load or come back out to this page
+    updateCompletionCount();
+});
+</script>
+
 {% endblock %}

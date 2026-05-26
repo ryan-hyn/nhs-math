@@ -150,7 +150,9 @@ def edit_profile():
 @login_required
 def term_1():
     units = ['Unit 1', 'Unit 2', 'Unit 3']
-    return render_template('term_1.html', title='Term 1', units=units)
+    completed_count = 2  # Hardcoded placeholder progress
+    return render_template('term_1.html', title='Term 1', units=units, completed_count=completed_count)
+
 
 @app.route('/unit_1')
 @login_required
@@ -158,11 +160,13 @@ def unit_1():
     swbat = 'Fill this in later'
     return render_template('unit_1.html', title='Unit 1', swbat=swbat)
 
+
 @app.route('/unit_2')
 @login_required
 def unit_2():
     swbat = 'Fill this in later'
     return render_template('unit_2.html', title='Unit 2', swbat=swbat)
+
 
 @app.route('/unit_3')
 @login_required
@@ -170,11 +174,14 @@ def unit_3():
     swbat = 'Fill this in later'
     return render_template('unit_3.html', title='Unit 3', swbat=swbat)
 
+
 @app.route('/term_2')
 @login_required
 def term_2():
     units = ['Unit 4', 'Unit 5']
-    return render_template('term_2.html', title='Term 2', units=units)
+    completed_count = 0  # Hardcoded placeholder progress
+    return render_template('term_2.html', title='Term 2', units=units, completed_count=completed_count)
+
 
 @app.route('/unit_4')
 @login_required
@@ -182,17 +189,21 @@ def unit_4():
     swbat = 'Fill this in later'
     return render_template('unit_4.html', title='Unit 4', swbat=swbat)
 
+
 @app.route('/unit_5')
 @login_required
 def unit_5():
     swbat = 'Fill this in later'
     return render_template('unit_5.html', title='Unit 5', swbat=swbat)
 
+
 @app.route('/term_3')
 @login_required
 def term_3():
     units = ['Unit 6', 'Unit 7', 'Unit 8']
-    return render_template('term_3.html', title='Term 3', units=units)
+    completed_count = 0  # Hardcoded placeholder progress
+    return render_template('term_3.html', title='Term 3', units=units, completed_count=completed_count)
+
 
 @app.route('/unit_6')
 @login_required
@@ -200,11 +211,13 @@ def unit_6():
     swbat = 'Fill this in later'
     return render_template('unit_6.html', title='Unit 6', swbat=swbat)
 
+
 @app.route('/unit_7')
 @login_required
 def unit_7():
     swbat = 'Fill this in later'
     return render_template('unit_7.html', title='Unit 7', swbat=swbat)
+
 
 @app.route('/unit_8')
 @login_required
@@ -212,20 +225,24 @@ def unit_8():
     swbat = 'Fill this in later'
     return render_template('unit_8.html', title='Unit 8', swbat=swbat)
 
+
 @app.route('/term_4')
 @login_required
 def term_4():
     units = [
-            {'name': 'Unit 9', 'route': 'unit_9'},
-            {'name': 'Final Review', 'route': 'final_review'} 
+        {'name': 'Unit 9', 'route': 'unit_9'},
+        {'name': 'Final Review', 'route': 'final_review'} 
     ]
-    return render_template('term_4.html', title='Term 4', units=units)
+    completed_count = 0  # Hardcoded placeholder progress
+    return render_template('term_4.html', title='Term 4', units=units, completed_count=completed_count)
+
 
 @app.route('/unit_9')
 @login_required
 def unit_9():
     swbat = 'Fill this in later'
     return render_template('unit_9.html', title='Unit 9', swbat=swbat)
+
 
 @app.route('/final_review')
 @login_required
