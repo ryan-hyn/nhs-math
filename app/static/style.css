@@ -672,10 +672,7 @@ footer {
     text-align: center;
 }
 
-.table-side {
-    position: relative;
-    top: 127px;
-}
+.table-side,
 .graph-side {
     width: 350px;
     text-align: center;
@@ -706,7 +703,7 @@ footer {
 
 .graph-side p,
 .steps-side p {
-    width: 450px;
+    width: 400px;
     margin: 20px auto;
     text-align: center;
 }
@@ -714,4 +711,99 @@ footer {
 .formula-byside {
     width: 350px;
     text-align: center;
+}
+
+.slope-formula-steps {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.middle-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fraction-inner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fraction-equation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fraction-symbol {
+    font-size: 20px;
+}
+
+.bar {
+    width: 90px;
+    border-top: 2px solid black;
+    margin: 4px 0;
+}
+
+.exampleside-graph {
+    display: flex;
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-left: 5px solid #0059b3;
+    border-radius: 4px 8px 8px 4px;
+    color: #002b55;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.example-graph {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.formula-graph {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.formula-side {
+    width: 400px;
+    margin: 25px auto;
+    padding: 15px 25px;
+    background: linear-gradient(90deg, #f4f8ff, #ffffff);
+    border: 1px dashed #004080;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #004080;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.bar-long {
+    width: 180px;
+    border-top: 2px solid black;
+    margin: 4px 0;
+}
+
+.sqrt-part {
+    display: inline-block;
+    border-top: 1px solid #004080;
+    padding-top: 2px;
+    position: relative;
+    top: 9px;
 }

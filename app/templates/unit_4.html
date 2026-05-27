@@ -48,7 +48,7 @@
       </p>
 
       <h3>Rate of Change</h3><br>
-      <strong>Rate of Change:</strong> how much y changes compared to how much x changes<br>
+      <strong>Rate of Change:</strong> how much y changes compared to how much x changes<br><br>
 
       <div class="slope-formula">
         <span>Rate of Change =</span>
@@ -59,8 +59,11 @@
         </div>
       </div>
       <br>
+      
+      <div class="note">
+        In Algebra 1, rate of change and slope mean the <strong>same thing.</strong>
+      </div>
 
-      <p>In Algebra 1, rate of change and slope mean the <strong>same thing.</strong></p>
     </div>
 
     <div class="section">
@@ -74,10 +77,10 @@
           <p>
             Step 1: Start at one clear point on the line where x and y are whole numbers<br><br>
             Step 2: Move to the next clear point
-            <o>
-              <li>Count how far you move up or down</li>
-              <li>Count how far you move right</li>
-            </o>
+            <p>
+               - Count how far you move up or down<br>
+               - Count how far you move right
+            </p>
             <br>
             Step 3: Write it as rise over run.</li>
           </p>
@@ -85,14 +88,21 @@
         
         <div class="graph-side">
           <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-riserun.jpg') }}" alt="Picture of a graph">
-          <p><strong>Note:</strong> graphs should be read from <strong>left to right</strong>.</p>
+          
+          <div class="note">
+            Graphs should be read from <strong>left to right.</strong>
+          </div>
+
         </div>
 
       </div>
 
-      <p>Using our steps, we can determine that when x moves 2 to the right, y moves up by 1.<br>
-        Therefore, using rise/over, we can identify our slope as 1/2
-      </p>
+      <div class="example">
+        <p>
+          Using our steps, we can determine that when x moves 2 to the right, y moves up by 1.
+          Therefore, using rise/over, we can identify our slope as 1/2
+        </p>
+      </div>
       <br>
       <strong>IMPORTANT INFO</strong>
 
@@ -220,7 +230,10 @@
         rate = 60mph
       </div><br>
 
-      <p><strong>Note:</strong> on a graph, time is always represented by x values mostly because time can't be manipulated--it's always constant.</p>
+      <div class="note">
+        <strong>Note:</strong> on a graph, time is always represented by x values mostly because time can't be manipulated--it's always constant.
+      </div>
+
     </div>
 
     <div class="section">
@@ -243,7 +256,7 @@
         Step 1: Find the y-intercept (the y value when x = 0)
         <br>
         
-        <div class="slope-formula">
+        <div class="slope-formula-steps">
           <span>Step 2: Find the slope; m =</span>
 
           <div class="fraction">
@@ -305,11 +318,11 @@
         <div class="steps-side">
           <p>
             Step 1: Calculate the slope using rise / run<br>
-            - The rise goes infront of x, and the run infront of y → run(y) + rise(x)<br>
+            - The rise goes infront of x, and the run infront of y → run(y) + rise(x)<br><br>
             - In this problem, it'll be 3y - 2x because the function goes down by 2 for every 3 to the right<br><br>
-            Step 2: Calculate the y-intercept by multiplying 'run' by the y-intercept<br>
+            Step 2: Calculate the y-intercept by multiplying 'run' by the y-intercept<br><br>
             - In this problem, it'll be 3 (the 'run' value) &times; 4 (the y-intercept) giving us 12<br><br>
-            Step 3: Combine our equation together<br>
+            Step 3: Combine our equation together<br><br>
             - The Standard From equation to this graph is 3y - 2x = 12
           </p>
 
@@ -351,11 +364,12 @@
         </div><br>
       </div>
 
-      <p>To find the opposite reciprocal:</p>
-      <ol>
-        <li>Flip the fraction.</li>
-        <li>Change the sign.</li>
-      </ol>
+      <div class="middle-text">
+        <p>To find the <strong>opposite reciprocal:</strong><br>
+          Step 1: Flip the fraction<br>
+          Step 2: Change the sign
+        </p>
+      </div>
 
     <div class="section">
       <h2>Arithmetic Sequences</h2>
@@ -387,7 +401,7 @@
       </ul>
 
       <div class="example">
-        Find the 4th term of 30, 25, 20, 15, 10.<br><br>
+        <strong>Example:</strong> Find the 4th term of 30, 25, 20, 15, 10.<br><br>
         a₁ = 30<br>
         d = -5<br>
         n = 4<br><br>
@@ -428,7 +442,7 @@
       </ul>
 
       <div class="example">
-        Find the 3rd term of 2, 6, 18, 54, 162.<br><br>
+        <strong>Example:</strong> Find the 3rd term of 2, 6, 18, 54, 162.<br><br>
         a₁ = 2<br>
         r = 3<br>
         n = 3<br><br>
@@ -461,12 +475,23 @@
 
       <p>A scatter plot is a graph with points that show the relationship between two things.</p>
 
-      <p>Examples:</p>
-      <ul>
-        <li>Hours studied and test scores</li>
-        <li>Height and shoe size</li>
-        <li>Temperature and ice cream sales</li>
-      </ul>
+      <div class="steps-to-picture">
+      
+        <div class="example">
+          <strong>Examples:</strong>
+        
+          <ul>
+            <li>Hours studied and test scores</li>
+            <li>Height and shoe size</li>
+            <li>Temperature and ice cream sales</li>
+          </ul>
+        </div>
+
+        <div class="graph-side">
+          <img class ="graph-img" src="{{ url_for('static', filename='images/scatter_plot.png') }}" alt="Picture of a graph">
+        </div>
+      
+      </div>
 
       <p>Each point represents one piece of data.</p>
     </div>
@@ -474,9 +499,9 @@
     <div class="section">
       <h2>Best Fit Line</h2>
 
-      <p>A best fit line is a straight line that goes through the middle of the data points as closely as possible.</p>
+      <p>A best fit line is a straight line that goes through the middle of scatter plots as closely as possible.</p>
 
-      <p>It shows the overall trend of the data.</p>
+      <p>It shows the <strong>overall trend</strong> of the data.</p>
 
       <h3>Positive Relationship</h3>
       <p>If the line goes upward from left to right, the relationship is positive.</p>

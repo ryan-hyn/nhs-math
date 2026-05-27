@@ -7,32 +7,40 @@
   <div class="section">
     <h2>Main Topics</h2>
     <ol>
-      <li>Quadratic graphs and their properties</li>
-      <li>Quadratic functions</li>
-      <li>Solving quadratic equations</li>
-      <li>Factoring to solve quadratic equations</li>
-      <li>Systems of linear and quadratic equations</li>
+      <li>Quadratic Graphs and Their Properties</li>
+      <li>Quadratic Functions</li>
+      <li>Solving Quadratic Equations</li>
+      <li>Factoring to Solve Quadratic Equations</li>
+      <li>Systems of Linear and Quadratic Equations</li>
     </ol>
   </div>
 
   <div class="section">
-    <h2>1. Quadratic Graphs and Their Properties</h2>
+    <h2>Quadratic Graphs and Their Properties</h2>
 
-    <p>A <strong>quadratic function</strong> is a function where the highest exponent is <strong>2</strong>.</p>
+    <p>
+      A <strong>quadratic function</strong> is a function where the highest exponent is <strong>2.</strong>
+    </p>
 
-    <p>The standard form of a quadratic function is:</p>
+    <div class="formula-graph">
+      
+      <div class="formula-side">
+        <span><strong>Formula:</strong></span>
+        y = ax² + bx + c
+      </div>
 
-    <p><code>y = ax² + bx + c</code></p>
+      <div class="graph-side">
+        <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-parabola.jpg') }}" alt="Picture of a graph">
+        <p><strong>Exponential / quadratic funtion</strong></p>
+      </div>
+      
+    </div>
 
-    <p>or</p>
-
-    <p><code>f(x) = ax² + bx + c</code></p>
-
-    <h3>Important Properties</h3>
+    <h3>Important Properties / Terms</h3>
 
     <table>
       <tr>
-        <th>Property</th>
+        <th>Property / Terms</th>
         <th>Meaning</th>
       </tr>
 
@@ -53,12 +61,12 @@
 
       <tr>
         <td>Opens Upward</td>
-        <td>Happens when <code>a</code> is positive</td>
+        <td>Happens when a in ax² is positive</td>
       </tr>
 
       <tr>
         <td>Opens Downward</td>
-        <td>Happens when <code>a</code> is negative</td>
+        <td>Happens when a in ax² is negative</td>
       </tr>
 
       <tr>
@@ -77,27 +85,22 @@
       </tr>
     </table>
 
-    <div class="rule">
-      If a is positive, the graph opens upward like a smile.
-      <br />
-      If a is negative, the graph opens downward like a frown.
+    <div class="note">
+      <strong>Note:</strong> an easy way to tell when a is negative or positive
+      <ul>
+        <li>When a is positive, the graph looks like a smiley face</li>
+        <li>When a is negative, the graph looks like a frowny face</li>
+      </ul>
     </div>
 
-    <div class="example">
-      <p>Example:</p>
-      <p><code>y = x² + 5x + 6</code></p>
-      <p>This is quadratic because the highest exponent is <code>2</code>.</p>
-    </div>
   </div>
 
   <div class="section">
-    <h2>2. Solving Quadratic Equations</h2>
+    <h2>Solving Quadratic Equations</h2>
 
-    <p>A quadratic equation is usually written as:</p>
+    <p>In order to solve quadratic equations, make the equation <strong>equal to 0</strong> → ax² + bx + c = 0</p>
 
-    <p><code>ax² + bx + c = 0</code></p>
-
-    <p>The goal is to find the values of <code>x</code> that make the equation equal <strong>0</strong>.</p>
+    <p>The goal is to find the <strong>values of <code>x</code></strong> that make the equation <strong>equal 0.</strong></p>
 
     <p>These values are called:</p>
 
@@ -129,45 +132,89 @@
         <td>The graph does not touch the x-axis</td>
       </tr>
     </table>
+
+    <div class="note">
+      <strong>Note:</strong> the highest exponent in a function is the amount of <strong>possible</strong> zeros
+      in the equation. However, that doesn't mean there will always be 2 zeros when the highest exponent is 2 for example.
+    </div>
   </div>
 
   <div class="section">
-    <h2>3. The Quadratic Formula</h2>
+    <h3>The Quadratic Formula</h3>
 
-    <p>The quadratic formula is:</p>
+    <div class="formula">
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol"><strong>Formula:</strong> x =</span>
+        <div class="fraction-inner">
+            <span>-b ± &radic;<span class="sqrt-part">2b² - 4ac</span></span>
+            <div class="bar-long"></div>
+            <span>2a</span>
 
-    <div class="rule">
-      x = (-b ± sqrt(b² - 4ac)) / 2a
+        </div>
+      
+      </div>
     </div>
 
-    <p>You use this formula when solving:</p>
-
-    <p><code>ax² + bx + c = 0</code></p>
-
-    <p>The values are:</p>
-
-    <p><code>a</code> = coefficient of <code>x²</code></p>
-    <p><code>b</code> = coefficient of <code>x</code></p>
-    <p><code>c</code> = constant</p>
   </div>
 
   <div class="section">
-    <h2>4. Example With Two Zeros</h2>
+    <h3>Example With Two Zeros</h3>
 
     <div class="example">
-      <p>Example:</p>
-      <p><code>x² + 5x + 6 = 0</code></p>
-
-      <p>Here:</p>
-      <p><code>a = 1</code>, <code>b = 5</code>, <code>c = 6</code></p>
+      <p>Example: x² + 5x + 6 = 0</p>
 
       <p><strong>Step 1:</strong> Plug the values into the quadratic formula.</p>
-      <p><code>x = (-5 ± sqrt(5² - 4(1)(6))) / 2(1)</code></p>
+      
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>-5 ± &radic;5² - 4(1)(6)</span></span>
+            <div class="bar-long"></div>
+            <span>2(1)</span>
 
-      <p><strong>Step 2:</strong> Simplify inside the square root.</p>
-      <p><code>x = (-5 ± sqrt(25 - 24)) / 2</code></p>
-      <p><code>x = (-5 ± sqrt(1)) / 2</code></p>
-      <p><code>x = (-5 ± 1) / 2</code></p>
+        </div>
+      
+      </div>
+
+      <p><strong>Step 2:</strong> Simplify</p>
+      
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>-5 ± &radic;(25 - 24)</span></span>
+            <div class="bar-long"></div>
+            <span>2</span>
+
+        </div>
+      
+      </div><br>
+      
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>-5 ± &radic;1</span></span>
+            <div class="bar-long"></div>
+            <span>2</span>
+
+        </div>
+      
+      </div><br>
+
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>-5 ± 1</span></span>
+            <div class="bar-long"></div>
+            <span>2</span>
+
+        </div>
+      
+      </div><br>
 
       <p><strong>Step 3:</strong> Solve both equations.</p>
 
@@ -188,90 +235,139 @@
   </div>
 
   <div class="section">
-    <h2>5. Example With No Real Zeros</h2>
+    <h3>Example With No Real Zeros</h3>
 
     <div class="example">
-      <p>Example:</p>
-      <p><code>x² + 4x + 8 = 0</code></p>
+      <p>Example: x² + 4x + 8 = 0</p>
 
-      <p>Here:</p>
-      <p><code>a = 1</code>, <code>b = 4</code>, <code>c = 8</code></p>
+      <p><strong>Step 1:</strong> Plug the values into the quadratic formula</p>
+      
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>-4 ± &radic;4² - 4(1)(8)</span></span>
+            <div class="bar-long"></div>
+            <span>2(1)</span>
 
-      <p><strong>Step 1:</strong> Plug the values into the quadratic formula.</p>
-      <p><code>x = (-4 ± sqrt(4² - 4(1)(8))) / 2(1)</code></p>
-
-      <p><strong>Step 2:</strong> Simplify inside the square root.</p>
-      <p><code>x = (-4 ± sqrt(16 - 32)) / 2</code></p>
-      <p><code>x = (-4 ± sqrt(-16)) / 2</code></p>
-
-      <div class="warning">
-        Since sqrt(-16) is not a real number, there are no real zeros.
+        </div>
+      
       </div>
+
+      <p><strong>Step 2:</strong> Simplify</p>
+      
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>-4 ± &radic;-16</span></span>
+            <div class="bar-long"></div>
+            <span>2</span>
+
+        </div>
+      
+      </div><br>
+
+      <p>
+        Since &radic;(-16) is not a real number, there are <strong>no real zeros</strong> and the graph does not cross the x-axis.
+      </p>
 
       <p class="answer">Final Answer: No real solutions</p>
 
-      <p>This means the graph does not cross the x-axis.</p>
     </div>
   </div>
 
   <div class="section">
-    <h2>6. Example With One Zero</h2>
+    <h3>Example With One Zero</h3>
 
     <div class="example">
-      <p>Example:</p>
-      <p><code>x² - 6x + 9 = 0</code></p>
+      <p>Example: x² - 6x + 9 = 0</p>
 
-      <p>Here:</p>
-      <p><code>a = 1</code>, <code>b = -6</code>, <code>c = 9</code></p>
+      <p><strong>Step 1:</strong> Plug the values into the quadratic formula</p>
+      
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>-(-6) ± &radic;-6² - 4(1)(9)</span></span>
+            <div class="bar-long"></div>
+            <span>2(1)</span>
 
-      <p><strong>Step 1:</strong> Plug the values into the quadratic formula.</p>
-      <p><code>x = (-(-6) ± sqrt((-6)² - 4(1)(9))) / 2(1)</code></p>
+        </div>
+      
+      </div>
 
-      <p><strong>Step 2:</strong> Simplify.</p>
-      <p><code>x = (6 ± sqrt(36 - 36)) / 2</code></p>
-      <p><code>x = (6 ± sqrt(0)) / 2</code></p>
-      <p><code>x = (6 ± 0) / 2</code></p>
+      <p><strong>Step 2:</strong> Simplify</p>
 
-      <p><strong>Step 3:</strong> Solve both.</p>
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>6 ± &radic;0</span></span>
+            <div class="bar-long"></div>
+            <span>2</span>
+
+        </div>
+      
+      </div><br>
+      
+      <div class="fraction-equation">
+          
+        <span class="fraction-symbol">x =</span>
+        <div class="fraction-inner">
+            <span>6 ± 0</span></span>
+            <div class="bar-long"></div>
+            <span>2(1)</span>
+
+        </div>
+      
+      </div>
+
+      <p><strong>Step 3:</strong> Solve both</p>
       <p><code>x = (6 + 0) / 2 = 3</code></p>
       <p><code>x = (6 - 0) / 2 = 3</code></p>
 
-      <p>Both answers are the same, so there is only <strong>one zero</strong>.</p>
+      <p>Both answers are the same, so there is only <strong>one zero,</strong> meaning the function only touches the x-axis once.</p>
 
       <p class="answer">Final Answer: x = 3</p>
 
-      <p>This means the graph touches the x-axis once at <code>x = 3</code>.</p>
     </div>
   </div>
 
   <div class="section">
-    <h2>7. Quadratic Functions</h2>
-
-    <p>A quadratic function can be graphed using its important points.</p>
-
-    <p>The standard form is:</p>
-
-    <p><code>y = ax² + bx + c</code></p>
-
     <h3>Finding the Vertex</h3>
 
-    <p>The vertex is the highest or lowest point of the parabola.</p>
+    <p>The vertex is the <strong>highest</strong> or <strong>lowest</strong> point of the parabola.</p>
 
-    <div class="rule">
-      Vertex Formula: x = -b / 2a
+    <div class="steps-to-picture">
+      
+      <div class="steps-side">
+        <div class="formula">
+          <strong>Vertex Formula:</strong> x = -b / 2a
+        </div>
+
+        <p>How to find the coordinate point of a vertex</p>
+
+        <ul>
+          <li><strong>Step 1:</strong> using the given equation, substitute the b and a values into the vertex formula in order to solve for x</li><br>
+          <li><strong>Step 2:</strong> plug the answer for x back into the original equation in order to solve for y-axis</li><br>
+          <li><strong>Step 3:</strong> write x and y as an ordered pair → (x, y)</li>
+        </ul>
+      </div>
+
+      <div class="graph-side">
+        <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-vertex.jpg') }}" alt="Picture of a graph">
+        <span>The vertex is at (-1.5, 2.25)</span>
+      </div>
+
     </div>
-
-    <p>Then plug that x-value back into the equation to find the y-value.</p>
-
-    <p>The vertex is written as:</p>
-
-    <p><code>(x, y)</code></p>
 
     <h3>Graphing a Quadratic Function</h3>
 
+    <p>Putting it all together, here are the steps to graph a quadratic function from an equation</p>
+
     <ol>
-      <li>Find the vertex using <code>x = -b / 2a</code>.</li>
-      <li>Plug that x-value into the equation to find the y-value.</li>
+      <li>Find the vertex using (x = -b / 2a) and plug x into the equation to find y </li>
       <li>Find the zeros by factoring or using the quadratic formula.</li>
       <li>Plot the vertex and zeros on the graph.</li>
       <li>Draw a smooth parabola through the points.</li>
@@ -279,66 +375,75 @@
   </div>
 
   <div class="section">
-    <h2>8. Factoring to Solve Quadratic Equations</h2>
+    <h2>Factoring to Solve Quadratic Equations</h2>
 
-    <p>Sometimes quadratic equations can be solved by factoring.</p>
+    <p><strong>Sometimes</strong> quadratic equations can be solved by <strong>factoring.</strong></p>
 
     <div class="example">
-      <p>Example:</p>
-      <p><code>x² + 5x + 6 = 0</code></p>
+      <p>Example: x² + 5x + 6 = 0</p>
 
-      <p><strong>Step 1:</strong> Factor the quadratic.</p>
+      <p>
+        <strong>Step 1:</strong> factor the quadratic by identifying two numbers that multiply to 5 and add up to 6.<br><br>
+        In this problem, those two numbers are 2 and 3
+      </p>
 
-      <p>Find two numbers that multiply to <code>6</code> and add to <code>5</code>.</p>
+      <p>
+        <strong>Step 2:</strong> split the middle term (5x) into those two numbers we identified
+      </p>
 
-      <p>Those numbers are <code>2</code> and <code>3</code>.</p>
+      <p>x² + 3x + 2x + 6 = 0</p>
 
-      <p>So:</p>
+      <p>
+        <strong>Step 3:</strong> group like terms together and factor out their GCF
+      </p>
 
-      <p><code>x² + 5x + 6 = 0</code></p>
+      <p>
+        (x² + 3x) + (2x + 6) = 0<br>
+        x(x + 3) + 2(x + 3)
+      </p>
 
-      <p>becomes:</p>
+      <div class="note">
+        <strong>Note:</strong> you have completed this step correctly if both terms inside the parenthesis are <strong>the same.</strong>
+      </div>
 
-      <p><code>(x + 2)(x + 3) = 0</code></p>
+      <p>
+        <strong>Step 4:</strong> group the outside terms together and multiply it with the inside
+      </p>
 
-      <p><strong>Step 2:</strong> Set each factor equal to zero.</p>
+      <p>(x + 2)(x + 3) = 0</p>
 
-      <p><code>x + 2 = 0</code></p>
-      <p><code>x = -2</code></p>
+      <p><strong>Step 5:</strong> In each parenthesis, identify your zeros by solving for 0</p>
 
-      <p>And:</p>
+      <p>
+        x + 2 = 0<br>
+        x = -2
+      </p>
 
-      <p><code>x + 3 = 0</code></p>
-      <p><code>x = -3</code></p>
+      <p>
+        x + 3 = 0<br>
+        x = -3
+      </p>
 
       <p class="answer">Final Answer: x = -2 and x = -3</p>
 
       <p>This means the graph crosses the x-axis at <code>x = -2</code> and <code>x = -3</code>.</p>
     </div>
 
-    <div class="rule">
-      Not every quadratic equation is factorable. If it is not factorable, use the quadratic formula.
+    <div class="note">
+      <strong>Note:</strong> not every quadratic equation is factorable. If it is not factorable, use the quadratic formula.
     </div>
+
   </div>
 
   <div class="section">
-    <h2>9. Systems of Linear and Quadratic Equations</h2>
+    <h2>Systems of Linear and Quadratic Equations</h2>
 
-    <p>A system of linear and quadratic equations has:</p>
+    <p>A system of linear and quadratic equations consists of <strong>one or more</strong> linear and quadratic equations.</p>
 
-    <ul>
-      <li>one linear equation</li>
-      <li>one quadratic equation</li>
-    </ul>
+    <p>Due to the shape of a parabola, there can be <strong>more than one</strong> solution to the system.</p>
 
-    <p>A linear equation makes a straight line.</p>
-
-    <p>A quadratic equation makes a parabola.</p>
-
-    <p>The solutions are the points where the line and parabola intersect.</p>
-
-    <div class="rule">
-      The main method is substitution because both equations are usually equal to y.
+    <div class="note">
+      The main method is <strong>substitution</strong> because both equations are usually equal to y.
     </div>
 
     <div class="example">
@@ -422,7 +527,7 @@
 
       <tr>
         <td>Quadratic Function</td>
-        <td>Highest exponent is 2</td>
+        <td>A function in which the highest exponent is 2</td>
       </tr>
 
       <tr>
@@ -462,12 +567,34 @@
 
       <tr>
         <td>Quadratic Formula</td>
-        <td>x = (-b ± sqrt(b² - 4ac)) / 2a</td>
+        <td>
+
+          <div class="slope-formula">
+            <span>x =</span>
+            <div class="fraction">
+              <span>-b ± &radic;b² - 4ac</span>
+              <span>2a</span>
+
+            </div>
+          </div>
+          
+        </td>
       </tr>
 
       <tr>
         <td>Vertex Formula</td>
-        <td>x = -b / 2a</td>
+        <td>
+
+          <div class="slope-formula">
+            <span>x =</span>
+            <div class="fraction">
+              <span>-b</span>
+              <span>2a</span>
+
+            </div>
+          </div>
+
+        </td>
       </tr>
 
       <tr>

@@ -31,28 +31,14 @@
 
       <p>On a graph, the solution is the point where the two lines <strong>intersect</strong>.</p>
 
-      <div class="formula">
-        Solution = (x, y)
+      <div class="graph-side">
+        <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-SOE-one.jpg') }}" alt="Picture of a graph">
+        <strong>Solution: (x, y)</strong>
+      
       </div>
-
-      <p>For this example, the solution is:</p>
-
-      <div class="formula">
-        (2, 5)
-      </div>
-
-      <p>That means x = 2 and y = 5.</p>
-    </div>
 
     <div class="section">
       <h2>Solving Systems by Graphing</h2>
-
-      <p>
-        Solving by graphing means you graph both equations on the same coordinate plane
-        and find where they cross.
-      </p>
-
-      <p>The point where the two lines intersect is the solution.</p>
 
       <h3>Steps</h3>
 
@@ -63,16 +49,25 @@
         <li>Write the answer as an ordered pair: (x, y).</li>
       </ol>
 
-      <div class="example">
-        <strong>Example:</strong><br>
-        y = 2x + 1<br>
-        y = -x + 7<br><br>
+      <div class="example-graph">
+        
+        <div class="exampleside-graph">
+          <strong>Example:</strong><br>
+          y = 2x + 1<br>
+          y = -x + 7<br><br>
 
-        These lines intersect at:<br>
-        (2, 5)<br><br>
+          These lines intersect at:<br>
+          (2, 5)<br><br>
 
-        <strong>Final answer:</strong> (2, 5)
+          <strong>Final answer:</strong> (2, 5)
+        </div>
+          
+        <div class="graph-side">
+          <img class ="graph-img" src="{{ url_for('static', filename='images/desmos-SOE-two.jpg') }}" alt="Picture of a graph">
+        </div>
+
       </div>
+
     </div>
 
     <div class="section">
@@ -85,7 +80,7 @@
       <p>This turns two equations into one equation with one variable.</p>
 
       <div class="note">
-        Substitution is usually easiest when one equation already has x = or y =.
+        Substitution is usually easiest when one equation already has x or y by itself.
       </div>
 
       <h3>Example 1: Basic Substitution</h3>
@@ -118,7 +113,7 @@
     </div>
 
     <div class="section">
-      <h2>Solving for a Variable Before Substitution</h2>
+      <h3>Solving for a Variable Before Substitution</h3>
 
       <p>Sometimes a variable is not already alone. In that case, isolate one variable first.</p>
 
@@ -163,7 +158,50 @@
     </div>
 
     <div class="section">
-      <h2>Infinitely Many Solutions</h2>
+      <h3>Using Multiplication Before Substitution</h3>
+
+      <p>Sometimes multiplying or dividing first makes substitution easier.</p>
+
+      <div class="example">
+        <strong>Example:</strong><br>
+        1/2x = -4 - 4y<br>
+        2y - 2x = 4<br><br>
+
+        The first equation has 1/2x, so multiply the entire first equation by 2 to isolate x.<br><br>
+
+        2(1/2x) = 2(-4 - 4y)<br>
+        x = -8 - 8y<br><br>
+
+        Substitute -8 - 8y for x in the second equation:<br>
+        2y - 2(-8 - 8y) = 4<br><br>
+
+        Distribute:<br>
+        2y + 16 + 16y = 4<br><br>
+
+        Combine like terms:<br>
+        18y + 16 = 4<br><br>
+
+        Subtract 16:<br>
+        18y = -12<br><br>
+
+        Divide by 18:<br>
+        y = -12/18<br><br>
+
+        Simplify:<br>
+        y = -2/3<br><br>
+
+        Plug y = -2/3 into x = -8 - 8y:<br>
+        x = -8 - 8(-2/3)<br>
+        x = -8 + 16/3<br>
+        x = -24/3 + 16/3<br>
+        x = -8/3<br><br>
+
+        <strong>Final answer:</strong> (-8/3, -2/3)
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Infinitely Many Solutions</h3>
 
       <p>
         A system has <strong>infinitely many solutions</strong> when both equations represent
@@ -189,11 +227,11 @@
     </div>
 
     <div class="section">
-      <h2>No Solution</h2>
+      <h3>No Solution</h3>
 
       <p>A system has <strong>no solution</strong> when the lines are parallel.</p>
 
-      <p>Parallel lines have the same slope but different y-intercepts.</p>
+      <p>Parallel lines have the <slope>same slope but different y-intercepts.</slope></p>
 
       <div class="example">
         <strong>Example:</strong><br>
@@ -265,7 +303,7 @@
     </div>
 
     <div class="section">
-      <h2>Solving a System by Multiplying One Equation</h2>
+      <h3>Solving a System by Multiplying One Equation</h3>
 
       <p>
         Sometimes the variables do not cancel right away.
@@ -308,49 +346,6 @@
         y = 3<br><br>
 
         <strong>Final answer:</strong> (2, 3)
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Using Multiplication Before Substitution</h2>
-
-      <p>Sometimes multiplying or dividing first makes substitution easier.</p>
-
-      <div class="example">
-        <strong>Example:</strong><br>
-        1/2x = -4 - 4y<br>
-        2y - 2x = 4<br><br>
-
-        The first equation has 1/2x, so multiply the entire first equation by 2 to isolate x.<br><br>
-
-        2(1/2x) = 2(-4 - 4y)<br>
-        x = -8 - 8y<br><br>
-
-        Substitute -8 - 8y for x in the second equation:<br>
-        2y - 2(-8 - 8y) = 4<br><br>
-
-        Distribute:<br>
-        2y + 16 + 16y = 4<br><br>
-
-        Combine like terms:<br>
-        18y + 16 = 4<br><br>
-
-        Subtract 16:<br>
-        18y = -12<br><br>
-
-        Divide by 18:<br>
-        y = -12/18<br><br>
-
-        Simplify:<br>
-        y = -2/3<br><br>
-
-        Plug y = -2/3 into x = -8 - 8y:<br>
-        x = -8 - 8(-2/3)<br>
-        x = -8 + 16/3<br>
-        x = -24/3 + 16/3<br>
-        x = -8/3<br><br>
-
-        <strong>Final answer:</strong> (-8/3, -2/3)
       </div>
     </div>
 
