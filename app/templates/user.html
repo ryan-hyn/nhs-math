@@ -2,15 +2,52 @@
 
 {% block content %}
 <div class="page-container2">
-    <h1>User: {{ user.username }}</h1>
-    {% if user == current_user %}
-                <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
-                {% endif %}
-    <hr>
-    {% for post in posts %}
-    <p>
-    {{ post.author.username }} says: <b>{{ post.body }}</b>
-    </p>
+    
+    <div class="unit-hero" style="margin-top: 30px; border-top: 5px solid #004080; box-shadow: 0 10px 25px rgba(0,64,128,0.05);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #004080, #0059b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: 700; box-shadow: 0 4px 10px rgba(0,64,128,0.2);">
+                    {{ user.username[0] | upper }}
+                </div>
+                <div>
+                    <h1 style="margin: 0; font-size: 2.2rem; border-bottom: none; padding-bottom: 0; color: #004080;">{{ user.username }}</h1>
+                    <p style="margin: 5px 0 0 0; color: #666; font-size: 1rem;">NHS Math Student Member</p>
+                </div>
+            </div>
+            
+            {% if user == current_user %}
+            <a href="{{ url_for('edit_profile') }}" class="highlight-card" style="margin: 0; padding: 12px 24px; font-size: 0.95rem;">
+                <span style="margin-right: 5px;">✏️</span> Edit Profile
+            </a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div style="max-width: 900px; margin: 40px auto 20px auto;">
+        <h2 style="font-size: 1.5rem; color: #004080; margin: 0; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+            📝 User Activity & Posts 
+            <span style="font-size: 0.9rem; background: #e0f0ff; color: #004080; padding: 3px 10px; border-radius: 20px;">{{ posts|length }}</span>
+        </h2>
+    </div>
+
+    <div class="posts" style="display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px; margin: 0 auto; gap: 20px;">
+        {% for post in posts %}
+            <div class="post-card" style="width: 100%; box-sizing: border-box; border-left: 4px solid #0059b3;">
+                <div class="post-meta">
+                    <span class="author">@{{ post.author.username }}</span>
+                    <span style="color: #999;">Activity Log</span>
+                </div>
+                <p style="margin: 5px 0 0 0; font-size: 1.1rem; color: #333; line-height: 1.6;">
+                    {{ post.body }}
+                </p>
+            </div>
+        {% else %}
+            <div class="empty-state" style="width: 100%; box-sizing: border-box; max-width: 900px; padding: 40px 20px;">
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 10px;">No posts or activity yet.</p>
+                <p style="font-size: 0.95rem; color: #999; margin: 0;">When this user completes assignments or updates their board, their stream will appear here!</p>
+            </div>
+        {% endfor %}
+    </div>
+
 </div>
-    {% endfor %}
 {% endblock %}

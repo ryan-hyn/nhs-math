@@ -1,58 +1,121 @@
 {% extends "public_base.html" %}
 
 {% block content %}
-
-<section class="hero-login-container">
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
+<style>
+    /* 1. Main viewport wrapper: Locks full screen and handles the 50/50 background split */
+    #top-nav + .split-login-view,
+    .split-login-view {
+        margin-top: 0px !important;
+        width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        position: relative; /* Essential anchor point for centering the form box */
+        box-sizing: border-box;
+        overflow: hidden !important;
+        
+        /* Draws the exact 135deg gradient on the top half, cuts perfectly to solid white at 50% */
+        background: linear-gradient(to bottom, #0059b3 0%, #8fc6ff 50%, #ffffff 50%, #ffffff 100%) !important;
+    }
 
-    <!-- Hero Section -->
-    <div class="hero">
+    /* 2. Welcome text header: Pinned cleanly near the top of the blue half */
+    .login-text-header {
+        width: 100%;
+        text-align: center;
+        padding-top: 110px; /* Comfortably clears your 70px fixed top navbar */
+        box-sizing: border-box;
+    }
+
+    .login-text-header h1 {
+        color: #ffffff !important;
+        font-size: 2.6rem; /* Slightly larger heading text */
+        margin: 0 0 10px 0;
+        font-weight: 600;
+    }
+
+    .login-text-header p {
+        color: #e6f2ff;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    /* 3. Absolute centering container for the login card */
+    .login-form-center-wrapper {
+        position: absolute;
+        top: 55%; /* Shifts slightly below 50% so the card visually balances over the split line */
+        left: 50%;
+        transform: translate(-50%, -50%); /* Mathematical dead-center positioning */
+        width: 100%;
+        max-width: 480px; /* Bumbed up from 440px to make the box prominently bigger */
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+    
+    /* 4. Retain your clean, spacious form container properties with upgraded padding */
+    .login-form-center-wrapper main.form-container {
+        margin: 0 auto !important;
+        padding: 45px 50px !important; /* Expanded internal padding to give elements breathing room */
+        background: #ffffff !important;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* Scaling up text rules inside the larger card */
+    .login-form-center-wrapper main.form-container h1 {
+        margin-top: 0 !important;
+        margin-bottom: 25px !important;
+        font-size: 2.2rem !important; /* Visually balanced header text */
+        text-align: center;
+    }
+
+    .login-form-center-wrapper main.form-container form p {
+        margin-top: 0;
+        margin-bottom: 16px !important; /* Generous spacing between inputs */
+        font-size: 1.05rem;
+    }
+</style>
+
+<div class="split-login-view">
+
+    <div class="login-text-header">
         <h1>Welcome to NHS Math: Algebra 1</h1>
         <p>Master Algebra 1 concepts quickly and confidently.</p>
-       </div>
-
-    <!-- Login Form Section -->
-    <main class="form-container">
-        <h1>Sign In</h1>
-        <form action="" method="post" novalidate>
-            {{ form.hidden_tag() }}
-            <p>
-                {{ form.username.label }}<br>
-                {{ form.username(size=32) }}<br>
-                {% for error in form.username.errors %}
-                <span class="error">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>
-                {{ form.password.label }}<br>
-                {{ form.password(size=32) }}<br>
-                {% for error in form.password.errors %}
-                <span class="error">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-            <p>{{ form.submit() }}</p>
-            <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
-            <p>
-                Forgot Your Password?
-                <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
-            </p>
-        </form>
-    </main>
-
-    <!-- Optional Algebra 1 Topics Preview 
-    <div class="topics-preview">
-        <h2>Explore Algebra 1 Topics</h2>
-        <ul>
-            <li>Linear Equations</li>
-            <li>Factoring & Quadratics</li>
-            <li>Graphing Functions</li>
-            <li>Inequalities</li>
-        </ul>
     </div>
-    -->
 
-</section>
+    <div class="login-form-center-wrapper">
+        <main class="form-container">
+            <h1>Sign In</h1>
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                
+                <p>
+                    {{ form.username.label }}<br>
+                    {{ form.username(size=32) }}<br>
+                    {% for error in form.username.errors %}
+                    <span class="error">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                
+                <p>
+                    {{ form.password.label }}<br>
+                    {{ form.password(size=32) }}<br>
+                    {% for error in form.password.errors %}
+                    <span class="error">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+                
+                <p style="margin-bottom: 22px !important; font-size: 1rem;">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+                <p>{{ form.submit() }}</p>
+                
+                <div style="text-align: center; font-size: 1rem; margin-top: 20px; line-height: 1.5;">
+                    <p style="margin: 2px 0;">New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+                    <p style="margin: 2px 0;"><a href="{{ url_for('reset_password_request') }}">Forgot Your Password?</a></p>
+                </div>
+            </form>
+        </main>
+    </div>
 
+</div>
 {% endblock %}
